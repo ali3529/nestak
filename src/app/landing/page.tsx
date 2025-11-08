@@ -83,7 +83,7 @@ export default function Landing() {
         {/* Header */}
         <div className="absolute bg-[#fff2f2] h-[139px] left-0 overflow-clip top-0 w-[1440px]">
           <div className="absolute bg-[#f42326] box-border content-stretch flex gap-[8px] h-[58px] items-center justify-center left-[155px] p-[8px] rounded-[50px] top-[42.5px] w-[197px]">
-            <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[15.25px] text-center text-white" dir="auto">
+            <p className="font-IRANYekanXVF font-semibold leading-[normal] not-italic relative shrink-0 text-[15.25px] text-center text-white" dir="auto">
               نصب اپلیکیشن
             </p>
             <div className="flex items-center justify-center relative shrink-0 size-[24px]">
@@ -94,7 +94,7 @@ export default function Landing() {
           </div>
           <div className="absolute box-border content-stretch flex gap-[58px] items-center justify-end left-[381px] px-[48px] py-0 top-[53.5px] w-[822px]">
             {['قوانین و مقررات','سوالات متداول','تماس با ما','معرفی'].map((t) => (
-              <p key={t} className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] not-italic text-[#5d5d5d] text-[15.25px] text-right" dir="auto">
+              <p key={t} className="font-IRANYekanXVF font-semibold leading-[normal] not-italic text-[#5d5d5d] text-[15.25px] text-right" dir="auto">
                 {t}
               </p>
             ))}
@@ -106,32 +106,32 @@ export default function Landing() {
         {/* Footer */}
         <div className="absolute h-[434px] left-0 top-[3556px] w-[1440px]">
           <div className="absolute content-stretch flex flex-col gap-[30px] h-[230px] items-end justify-center left-[155px] top-[70px] w-[234px]">
-            <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#f42326] text-[15.25px] text-right w-full whitespace-pre-wrap" dir="auto">دسترسی سریع</p>
+            <p className="font-IRANYekanXVF font-semibold leading-[normal] not-italic relative shrink-0 text-[#f42326] text-[15.25px] text-right w-full whitespace-pre-wrap" dir="auto">دسترسی سریع</p>
             <div className="content-stretch flex flex-col gap-[25px] items-end relative shrink-0 w-full">
               {['معرفی','تماس با ما','سوالات متداول','قوانین و مقررات'].map((t) => (
-                <p key={t} className="font-['IRANYekanXVF:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#5d5d5d] text-[14px] text-right" dir="auto">{t}</p>
+                <p key={t} className="font-IRANYekanXVF font-medium leading-[normal] not-italic relative shrink-0 text-[#5d5d5d] text-[14px] text-right" dir="auto">{t}</p>
               ))}
             </div>
           </div>
           <div className="absolute content-stretch flex flex-col gap-[30px] items-end justify-center left-[533px] top-[70px] w-[275px]">
-            <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#f42326] text-[15.25px] text-right w-full whitespace-pre-wrap" dir="auto">ارتباط با ما</p>
+            <p className="font-IRANYekanXVF font-semibold leading-[normal] not-italic relative shrink-0 text-[#f42326] text-[15.25px] text-right w-full whitespace-pre-wrap" dir="auto">ارتباط با ما</p>
             <div className="content-stretch flex flex-col gap-[25px] items-end relative shrink-0 w-full text-[#5d5d5d] text-[14px]">
               <div className="content-stretch flex gap-[12px] items-center justify-end relative shrink-0">
-                <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-right" dir="auto">nestak.info@gmail.com</p>
+                <p className="font-IRANYekanXVF font-medium leading-[normal] not-italic relative shrink-0 text-right" dir="auto">nestak.info@gmail.com</p>
                 <div className="overflow-clip relative shrink-0 size-[20px]"><div className="absolute inset-[12.5%_8.33%]"><img alt="" className="block max-w-none size-full" src={img4} /></div></div>
               </div>
               <div className="content-stretch flex gap-[12px] items-center justify-end relative shrink-0">
-                <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-right" dir="auto">011 2645 33 17 - 0912 649 12 18</p>
+                <p className="font-IRANYekanXVF font-medium leading-[normal] not-italic relative shrink-0 text-right" dir="auto">011 2645 33 17 - 0912 649 12 18</p>
                 <div className="overflow-clip relative shrink-0 size-[20px]"><div className="absolute inset-[12.5%]"><img alt="" className="block max-w-none size-full" src={img5} /></div></div>
               </div>
               <div className="content-stretch flex gap-[12px] items-center justify-end relative shrink-0 w-full">
-                <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-right" dir="auto">تهران، خ انقلاب، کوچه بنفشه، پلاک18</p>
+                <p className="font-IRANYekanXVF font-medium leading-[normal] not-italic relative shrink-0 text-right" dir="auto">تهران، خ انقلاب، کوچه بنفشه، پلاک18</p>
                 <div className="overflow-clip relative shrink-0 size-[20px]"><div className="absolute inset-[8.33%_12.5%]"><img alt="" className="block max-w-none size-full" src={img6} /></div></div>
               </div>
               <div className="content-stretch flex gap-[12px] items-start justify-end relative shrink-0">
                 <div className="content-stretch flex flex-col gap-[9px] items-end relative shrink-0 w-[116px]">
-                  <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[normal] min-w-full not-italic relative shrink-0 text-right w-[min-content] whitespace-pre-wrap" dir="auto">شنبه - چهارشنبه:</p>
-                  <div className="content-stretch flex font-['IRANYekanXVF:Medium',sans-serif] gap-[4px] items-center leading-[normal] not-italic relative shrink-0 text-right"><p className="relative shrink-0" dir="auto">20:00</p><p className="relative shrink-0" dir="auto">الی</p><p className="relative shrink-0" dir="auto">08:00</p></div>
+                  <p className="font-IRANYekanXVF font-medium leading-[normal] min-w-full not-italic relative shrink-0 text-right w-[min-content] whitespace-pre-wrap" dir="auto">شنبه - چهارشنبه:</p>
+                  <div className="content-stretch flex font-IRANYekanXVF font-medium gap-[4px] items-center leading-[normal] not-italic relative shrink-0 text-right"><p className="relative shrink-0" dir="auto">20:00</p><p className="relative shrink-0" dir="auto">الی</p><p className="relative shrink-0" dir="auto">08:00</p></div>
                 </div>
                 <div className="overflow-clip relative shrink-0 size-[20px]"><div className="absolute inset-[8.33%]"><div className="absolute inset-0" style={{ ["--fill-0" as any]: "rgba(244, 35, 38, 1)" }}><img alt="" className="block max-w-none size-full" src={img7} /></div></div></div>
               </div>
@@ -139,7 +139,7 @@ export default function Landing() {
           </div>
           <div className="absolute content-stretch flex flex-col gap-[29px] h-[230px] items-end left-[981px] top-[70px] w-[304px]">
             <div className="h-[59px] overflow-clip relative shrink-0 w-[51px]"><img alt="Nestak" className="block max-w-none size-full" src={img2431779403328} /></div>
-            <div className="flex-[1_0_0] font-['IRANYekanXVF:Regular',sans-serif] leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#919191] text-[14px] text-right w-full whitespace-pre-wrap" dir="auto">
+            <div className="flex-[1_0_0] font-IRANYekanXVF font-normal leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#919191] text-[14px] text-right w-full whitespace-pre-wrap" dir="auto">
               <p className="mb-0" dir="auto">همه چیز برای زندگی شاد با حیوان خانگی‌تان! یادآوری‌های هوشمند، چت با دامپزشک، خرید آسان لوازم و پیدا کردن خانه جدید برای حیوان‌ها و دستیار شما در مراقبت بهتر؛ همگی در نستک.</p>
               <p dir="auto">{`اولین ماه، هدیه ما به شماست! `}</p>
             </div>
@@ -147,32 +147,32 @@ export default function Landing() {
           <div className="absolute h-0 left-[155px] top-0 w-[1130px]"><div className="absolute bottom-0 left-0 right-0 top-[-1px]"><img alt="" className="block max-w-none size-full" src={imgLine1} /></div></div>
           <div className="absolute h-0 left-[155px] top-[369px] w-[1130px]"><div className="absolute bottom-0 left-0 right-0 top-[-1px]"><img alt="" className="block max-w-none size-full" src={imgLine1} /></div></div>
           <div className="absolute content-stretch flex gap-[4px] items-center justify-end left-[1066px] top-[393px]">
-            <p className="font-['IRANYekanXVF:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#5d5d5d] text-[12.75px] text-right" dir="auto"><span>{`تمامی حقوق متعلق به `}</span><span className="font-['IRANYekanXVF:DemiBold',sans-serif] text-[#f42326]">نستک</span><span>{` می‌باشد.`}</span></p>
+            <p className="font-IRANYekanXVF font-normal leading-[normal] not-italic relative shrink-0 text-[#5d5d5d] text-[12.75px] text-right" dir="auto"><span>{`تمامی حقوق متعلق به `}</span><span className="font-IRANYekanXVF font-semibold text-[#f42326]">نستک</span><span>{` می‌باشد.`}</span></p>
             <div className="overflow-clip relative shrink-0 size-[18px]"><div className="absolute inset-[8.33%]"><img alt="" className="block max-w-none size-full" src={imgGroup6} /></div></div>
           </div>
           <div className="absolute content-stretch flex gap-[7px] items-start left-[155px] top-[393px]">
-            <p className="font-['IRANYekanXVF:Regular',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#5d5d5d] text-[12.75px] text-right" dir="auto"><span>{`طراحی و توسعه: `}</span><span className="font-['IRANYekanXVF:DemiBold',sans-serif] text-[#f42326]">فـنـورا</span></p>
+            <p className="font-IRANYekanXVF font-normal leading-[normal] not-italic relative shrink-0 text-[#5d5d5d] text-[12.75px] text-right" dir="auto"><span>{`طراحی و توسعه: `}</span><span className="font-IRANYekanXVF font-semibold text-[#f42326]">فـنـورا</span></p>
           </div>
         </div>
 
         {/* Rules strip */}
         <div className="absolute h-[243px] left-0 overflow-clip top-[3313px] w-[1440px]">
-          <p className="absolute font-['IRANYekanXVF:Regular',sans-serif] leading-[1.7] left-[1285px] not-italic text-[#919191] text-[14px] text-right top-[113px] translate-x-[-100%] w-[940px] whitespace-pre-wrap" dir="auto">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشت.</p>
-          <p className="absolute font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] left-[1285px] not-italic text-[#303030] text-[20.5px] text-right top-[64px] translate-x-[-100%]" dir="auto">قوانین و مقررات</p>
+          <p className="absolute font-IRANYekanXVF font-normal leading-[1.7] left-[1285px] not-italic text-[#919191] text-[14px] text-right top-[113px] translate-x-[-100%] w-[940px] whitespace-pre-wrap" dir="auto">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشت.</p>
+          <p className="absolute font-IRANYekanXVF font-semibold leading-[normal] left-[1285px] not-italic text-[#303030] text-[20.5px] text-right top-[64px] translate-x-[-100%]" dir="auto">قوانین و مقررات</p>
           <div className="absolute border border-neutral-200 border-solid content-stretch flex flex-col gap-[8px] h-[112px] items-center justify-center left-[155px] rounded-[16px] top-[64px] w-[116px]">
             <div className="h-[69px] relative shrink-0 w-[89px]"><img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgEnamad1300X2311} /></div>
           </div>
           <div className="absolute h-[46px] left-[345px] top-[130px] w-[940px]"><img alt="" className="absolute inset-0 max-w-none object-50%-50% object-cover pointer-events-none size-full" src={imgFrame53} /></div>
           <div className="absolute box-border content-stretch flex items-center justify-end p-[8px] right-[155px] top-[183px]">
             <div className="relative shrink-0 size-[20px]"><img alt="" className="block max-w-none size-full" src={imgHugeIconArrowsOutlineDirectionLeft2} /></div>
-            <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] not-italic relative shrink-0 text-[#f42326] text-[12.75px] text-right" dir="auto">بیشتر</p>
+            <p className="font-IRANYekanXVF font-medium leading-[1.7] not-italic relative shrink-0 text-[#f42326] text-[12.75px] text-right" dir="auto">بیشتر</p>
           </div>
         </div>
         {/* Contact */}
         <div className="absolute h-[684px] left-0 overflow-clip top-[1961px] w-[1440px]">
           <div className="absolute content-stretch flex flex-col gap-[20px] h-[125px] items-end left-[792px] not-italic text-right top-[79px] w-[493px]">
-            <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] relative shrink-0 text-[#303030] text-[20.5px] w-full whitespace-pre-wrap" dir="auto">ارتباط با ما</p>
-            <div className="flex-[1_0_0] font-['IRANYekanXVF:Regular',sans-serif] leading-[1.7] min-h-px min-w-px relative shrink-0 text-[#919191] text-[14px] w-full whitespace-pre-wrap">
+            <p className="font-IRANYekanXVF font-semibold leading-[normal] relative shrink-0 text-[#303030] text-[20.5px] w-full whitespace-pre-wrap" dir="auto">ارتباط با ما</p>
+            <div className="flex-[1_0_0] font-IRANYekanXVF font-normal leading-[1.7] min-h-px min-w-px relative shrink-0 text-[#919191] text-[14px] w-full whitespace-pre-wrap">
               <p className="mb-0" dir="auto">نظرتان برای ما ارزشمند است و دوست داریم تجربه شما و حیوان خانگی‌تان را بشنویم. تیم ما آماده است که پاسخگوی سوالات و مشکلات شما باشد.</p>
               <p dir="auto">راه‌های ارتباطی مختلف را در اختیار شما قرار داده‌ایم تا راحت‌تر با ما در تماس باشید.</p>
             </div>
@@ -181,16 +181,16 @@ export default function Landing() {
             <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full">
               {[{label:'نام و نام خانودگی',ph:'نام خود را وارد کنید'},{label:'شماره تماس',ph:'شماره موبایل خود را وارد کنید'}].map((f)=> (
                 <div key={f.label} className="content-stretch flex flex-col gap-[12px] items-end relative shrink-0 w-full">
-                  <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right w-full whitespace-pre-wrap" dir="auto">{f.label}</p>
+                  <p className="font-IRANYekanXVF font-medium leading-[normal] not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right w-full whitespace-pre-wrap" dir="auto">{f.label}</p>
                   <div className="bg-white box-border content-stretch flex gap-[8px] items-center justify-end overflow-clip pb-[24px] pt-[20px] px-[16px] relative rounded-[16px] shrink-0 w-full">
-                    <p className="flex-[1_0_0] font-['IRANYekanXVF:Medium',sans-serif] leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[#919191] text-[14px] text-right whitespace-pre-wrap" dir="auto">{f.ph}</p>
+                    <p className="flex-[1_0_0] font-IRANYekanXVF font-medium leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[#919191] text-[14px] text-right whitespace-pre-wrap" dir="auto">{f.ph}</p>
                   </div>
                 </div>
               ))}
               <div className="content-stretch flex flex-col gap-[12px] items-end relative shrink-0 w-full">
-                <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right w-full whitespace-pre-wrap" dir="auto">پیام شما</p>
+                <p className="font-IRANYekanXVF font-medium leading-[normal] not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right w-full whitespace-pre-wrap" dir="auto">پیام شما</p>
                 <div className="bg-white box-border content-stretch flex gap-[8px] h-[116px] items-start justify-center overflow-clip px-[16px] py-[24px] relative rounded-[16px] shrink-0 w-full">
-                  <p className="flex-[1_0_0] font-['IRANYekanXVF:Medium',sans-serif] leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[#919191] text-[14px] text-right whitespace-pre-wrap" dir="auto">متن پیام خود را بنویسید...</p>
+                  <p className="flex-[1_0_0] font-IRANYekanXVF font-medium leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[#919191] text-[14px] text-right whitespace-pre-wrap" dir="auto">متن پیام خود را بنویسید...</p>
                 </div>
               </div>
             </div>
@@ -200,26 +200,26 @@ export default function Landing() {
                   <div className="relative size-[24px]"><img alt="" className="block max-w-none size-full" src={imgHugeIconArrowsOutlineArrowLeft} /></div>
                 </div>
               </div>
-              <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-center text-white" dir="auto">ارسال پیام</p>
+              <p className="font-IRANYekanXVF font-semibold leading-[normal] not-italic relative shrink-0 text-[14px] text-center text-white" dir="auto">ارسال پیام</p>
             </div>
           </div>
           <div className="absolute box-border content-stretch flex flex-col gap-[25px] items-end left-[915px] px-0 py-[24px] top-[243px] w-[370px]">
             <div className="content-stretch flex gap-[12px] items-center justify-end relative shrink-0">
-              <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] not-italic relative shrink-0 text-[#303030] text-[14px] text-right" dir="auto">nestak.info@gmail.com</p>
+              <p className="font-IRANYekanXVF font-medium leading-[1.7] not-italic relative shrink-0 text-[#303030] text-[14px] text-right" dir="auto">nestak.info@gmail.com</p>
               <div className="overflow-clip relative shrink-0 size-[24px]"><div className="absolute inset-[12.5%_8.33%]"><img alt="" className="block max-w-none size-full" src={img} /></div></div>
             </div>
             <div className="content-stretch flex gap-[12px] items-center justify-end relative shrink-0">
-              <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] not-italic relative shrink-0 text-[#303030] text-[14px] text-right" dir="auto">011 2645 33 17 - 0912 649 12 18</p>
+              <p className="font-IRANYekanXVF font-medium leading-[1.7] not-italic relative shrink-0 text-[#303030] text-[14px] text-right" dir="auto">011 2645 33 17 - 0912 649 12 18</p>
               <div className="overflow-clip relative shrink-0 size-[24px]"><div className="absolute inset-[12.5%]"><img alt="" className="block max-w-none size-full" src={img1} /></div></div>
             </div>
             <div className="content-stretch flex gap-[12px] items-center justify-end relative shrink-0 w-full">
-              <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] not-italic relative shrink-0 text-[#303030] text-[14px] text-right" dir="auto">تهران، خ انقلاب، کوچه بنفشه، پلاک18</p>
+              <p className="font-IRANYekanXVF font-medium leading-[1.7] not-italic relative shrink-0 text-[#303030] text-[14px] text-right" dir="auto">تهران، خ انقلاب، کوچه بنفشه، پلاک18</p>
               <div className="overflow-clip relative shrink-0 size-[24px]"><div className="absolute inset-[8.33%_12.5%]"><img alt="" className="block max-w-none size-full" src={img2} /></div></div>
             </div>
             <div className="content-stretch flex gap-[12px] items-start justify-end relative shrink-0">
               <div className="content-stretch flex flex-col gap-[9px] items-end relative shrink-0 w-[116px]">
-                <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] min-w-full not-italic relative shrink-0 text-[#303030] text-[14px] text-right w-[min-content] whitespace-pre-wrap" dir="auto">شنبه - چهارشنبه:</p>
-                <div className="content-stretch flex font-['IRANYekanXVF:Medium',sans-serif] gap-[4px] items-center leading-[1.7] not-italic relative shrink-0 text-[#303030] text-[14px] text-right"><p className="relative shrink-0" dir="auto">20:00</p><p className="relative shrink-0" dir="auto">الی</p><p className="relative shrink-0" dir="auto">08:00</p></div>
+                <p className="font-IRANYekanXVF font-medium leading-[1.7] min-w-full not-italic relative shrink-0 text-[#303030] text-[14px] text-right w-[min-content] whitespace-pre-wrap" dir="auto">شنبه - چهارشنبه:</p>
+                <div className="content-stretch flex font-IRANYekanXVF font-medium gap-[4px] items-center leading-[1.7] not-italic relative shrink-0 text-[#303030] text-[14px] text-right"><p className="relative shrink-0" dir="auto">20:00</p><p className="relative shrink-0" dir="auto">الی</p><p className="relative shrink-0" dir="auto">08:00</p></div>
               </div>
               <div className="overflow-clip relative shrink-0 size-[24px]"><div className="absolute inset-[8.33%]"><div className="absolute inset-0" style={{ ["--fill-0" as any]: "rgba(244, 35, 38, 1)" }}><img alt="" className="block max-w-none size-full" src={img3} /></div></div></div>
             </div>
@@ -228,45 +228,45 @@ export default function Landing() {
 
         {/* FAQ */}
         <div className="absolute h-[668px] left-0 overflow-clip top-[2645px] w-[1440px]">
-          <p className="absolute font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] left-[calc(50%+0.5px)] not-italic text-[#303030] text-[20.5px] text-center top-[28px] translate-x-[-50%]" dir="auto">سوالات متداول</p>
+          <p className="absolute font-IRANYekanXVF font-semibold leading-[normal] left-[calc(50%+0.5px)] not-italic text-[#303030] text-[20.5px] text-center top-[28px] translate-x-[-50%]" dir="auto">سوالات متداول</p>
           <div className="absolute content-stretch flex flex-col gap-[8px] items-start left-[725px] top-[113px] w-[560px]">
             <div className="bg-[#f4f5f7] box-border content-stretch flex gap-[8px] h-[87px] items-center justify-end px-[24px] py-[12px] relative rounded-[30px] shrink-0 w-full">
               <div className="relative shrink-0 size-[24px]"><img alt="" className="block max-w-none size-full" src={imgHugeIconArrowsOutlineDirectionDown2} /></div>
-              <p className="flex-[1_0_0] font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right whitespace-pre-wrap" dir="auto">۱. اپلیکیشن چه امکاناتی دارد؟</p>
+              <p className="flex-[1_0_0] font-IRANYekanXVF font-medium leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right whitespace-pre-wrap" dir="auto">۱. اپلیکیشن چه امکاناتی دارد؟</p>
             </div>
             <div className="bg-[#f4f5f7] box-border content-stretch flex flex-col items-center px-[24px] py-0 relative rounded-[30px] shrink-0 w-full">
               <div className="box-border content-stretch flex items-center justify-between px-0 py-[31.5px] relative shrink-0 w-full">
                 <div className="relative shrink-0 size-[24px]"><img alt="" className="block max-w-none size-full" src={imgHugeIconArrowsOutlineDirectionUp2} /></div>
-                <p className="flex-[1_0_0] font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#f42326] text-[15.25px] text-right whitespace-pre-wrap" dir="auto">3. آیا می‌توانم یادآورهای مخصوص برای حیوان خانگی‌ام تنظیم کنم؟</p>
+                <p className="flex-[1_0_0] font-IRANYekanXVF font-medium leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#f42326] text-[15.25px] text-right whitespace-pre-wrap" dir="auto">3. آیا می‌توانم یادآورهای مخصوص برای حیوان خانگی‌ام تنظیم کنم؟</p>
               </div>
               <div className="box-border content-stretch flex gap-[8px] items-center justify-center pb-[31.5px] pt-0 px-0 relative shrink-0 w-full">
-                <p className="flex-[1_0_0] font-['IRANYekanXVF:Regular',sans-serif] leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#919191] text-[14px] text-right whitespace-pre-wrap" dir="auto">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+                <p className="flex-[1_0_0] font-IRANYekanXVF font-normal leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#919191] text-[14px] text-right whitespace-pre-wrap" dir="auto">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
               </div>
             </div>
             <div className="bg-[#f4f5f7] box-border content-stretch flex gap-[8px] h-[87px] items-center justify-end px-[24px] py-[12px] relative rounded-[30px] shrink-0 w-full">
               <div className="relative shrink-0 size-[24px]"><img alt="" className="block max-w-none size-full" src={imgHugeIconArrowsOutlineDirectionDown2} /></div>
-              <p className="flex-[1_0_0] font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right whitespace-pre-wrap" dir="auto">5. آیا می‌توانم از طریق اپلیکیشن خرید کنم؟</p>
+              <p className="flex-[1_0_0] font-IRANYekanXVF font-medium leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right whitespace-pre-wrap" dir="auto">5. آیا می‌توانم از طریق اپلیکیشن خرید کنم؟</p>
             </div>
             <div className="bg-[#f4f5f7] box-border content-stretch flex gap-[8px] h-[87px] items-center justify-end px-[24px] py-[12px] relative rounded-[30px] shrink-0 w-full">
               <div className="relative shrink-0 size-[24px]"><img alt="" className="block max-w-none size-full" src={imgHugeIconArrowsOutlineDirectionDown2} /></div>
-              <p className="flex-[1_0_0] font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right whitespace-pre-wrap" dir="auto">7. اپلیکیشن چه امکاناتی دارد؟</p>
+              <p className="flex-[1_0_0] font-IRANYekanXVF font-medium leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right whitespace-pre-wrap" dir="auto">7. اپلیکیشن چه امکاناتی دارد؟</p>
             </div>
           </div>
           <div className="absolute content-stretch flex flex-col gap-[8px] items-start left-[155px] top-[113px] w-[560px]">
             {Array.from({ length: 4 }).map((_, i) => (
               <div key={i} className="bg-[#f4f5f7] box-border content-stretch flex gap-[8px] h-[87px] items-center justify-end px-[24px] py-[12px] relative rounded-[30px] shrink-0 w-full">
                 <div className="relative shrink-0 size-[24px]"><img alt="" className="block max-w-none size-full" src={imgHugeIconArrowsOutlineDirectionDown2} /></div>
-                <p className="flex-[1_0_0] font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right whitespace-pre-wrap" dir="auto">سوال متداول {i + 1}</p>
+                <p className="flex-[1_0_0] font-IRANYekanXVF font-medium leading-[1.7] min-h-px min-w-px not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right whitespace-pre-wrap" dir="auto">سوال متداول {i + 1}</p>
               </div>
             ))}
           </div>
         </div>
         {/* Why choose Nestak */}
         <div className="absolute bg-[#f4f5f7] h-[828px] left-0 overflow-clip top-[657px] w-[1440px]">
-          <p className="absolute font-['IRANYekanXVF:Regular',sans-serif] leading-[1.7] left-[1285px] not-italic text-[#919191] text-[14px] text-right top-[136px] translate-x-[-100%] w-[1130px] whitespace-pre-wrap" dir="auto">
+          <p className="absolute font-IRANYekanXVF font-normal leading-[1.7] left-[1285px] not-italic text-[#919191] text-[14px] text-right top-[136px] translate-x-[-100%] w-[1130px] whitespace-pre-wrap" dir="auto">
             با یادآورهای دقیق، ارتباط سریع با دامپزشک‌ها و امکانات متنوع خرید و سرپرستی، دیگه هیچ دغدغه‌ای برای مراقبت از پتت نداری.
           </p>
-          <p className="absolute font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] left-[1285px] not-italic text-[#303030] text-[20.5px] text-right top-[91px] translate-x-[-100%]" dir="auto">
+          <p className="absolute font-IRANYekanXVF font-semibold leading-[normal] left-[1285px] not-italic text-[#303030] text-[20.5px] text-right top-[91px] translate-x-[-100%]" dir="auto">
             <span>{`چرا `}</span>
             <span className="text-[#f42326]">نستک</span>
             <span>{` رو انتخاب کنم؟`}</span>
@@ -281,8 +281,8 @@ export default function Landing() {
                       <img alt="" className="block max-w-none size-full" src={c.img} />
                     </div>
                     <div className="content-stretch flex flex-col gap-[12px] items-center leading-[1.7] not-italic relative shrink-0 text-center w-full whitespace-pre-wrap">
-                      <p className="font-['IRANYekanXVF:DemiBold',sans-serif] relative shrink-0 text-[#303030] text-[15.25px] w-full" dir="auto">{c.title}</p>
-                      <p className="font-['IRANYekanXVF:Regular',sans-serif] relative shrink-0 text-[#919191] text-[14px] w-full" dir="auto">{c.desc}</p>
+                      <p className="font-IRANYekanXVF font-semibold relative shrink-0 text-[#303030] text-[15.25px] w-full" dir="auto">{c.title}</p>
+                      <p className="font-IRANYekanXVF font-normal relative shrink-0 text-[#919191] text-[14px] w-full" dir="auto">{c.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -297,8 +297,8 @@ export default function Landing() {
                       <img alt="" className="block max-w-none size-full" src={c.img} />
                     </div>
                     <div className="content-stretch flex flex-col gap-[12px] items-center leading-[1.7] not-italic relative shrink-0 text-center w-full whitespace-pre-wrap">
-                      <p className="font-['IRANYekanXVF:DemiBold',sans-serif] relative shrink-0 text-[#303030] text-[15.25px] w-full" dir="auto">{c.title}</p>
-                      <p className="font-['IRANYekanXVF:Regular',sans-serif] relative shrink-0 text-[#919191] text-[14px] w-full" dir="auto">{c.desc}</p>
+                      <p className="font-IRANYekanXVF font-semibold relative shrink-0 text-[#303030] text-[15.25px] w-full" dir="auto">{c.title}</p>
+                      <p className="font-IRANYekanXVF font-normal relative shrink-0 text-[#919191] text-[14px] w-full" dir="auto">{c.desc}</p>
                     </div>
                   </div>
                 </div>
@@ -322,11 +322,11 @@ export default function Landing() {
           </div>
           <div className="absolute bottom-[85px] content-stretch flex flex-col gap-[46px] items-end right-[155px]">
             <div className="content-stretch flex flex-col gap-[12px] items-end not-italic relative shrink-0 text-right w-full whitespace-pre-wrap">
-              <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] relative shrink-0 text-[#303030] text-[20.5px] w-full" dir="auto">
+              <p className="font-IRANYekanXVF font-semibold leading-[normal] relative shrink-0 text-[#303030] text-[20.5px] w-full" dir="auto">
                 <span>{`دانلود اپلیکیشن `}</span>
                 <span className="text-[#f42326]">نستک</span>
               </p>
-              <p className="font-['IRANYekanXVF:Regular',sans-serif] leading-[1.7] relative shrink-0 text-[#919191] text-[14px] w-full" dir="auto">
+              <p className="font-IRANYekanXVF font-normal leading-[1.7] relative shrink-0 text-[#919191] text-[14px] w-full" dir="auto">
                 اگه دنبال پت جدیدی هستی یا می‌خوای پتت رو واگذار کنی، نستک فضایی امن برای ارتباط بین افراد مهربون و مسئولیت‌پذیر فراهم کرده.
               </p>
             </div>
@@ -334,10 +334,10 @@ export default function Landing() {
               <div className="content-stretch flex gap-[15px] items-center relative shrink-0 w-full">
                 <div className="bg-white box-border content-stretch flex flex-[1_0_0] gap-[16px] h-[72px] items-center justify-end min-h-px min-w-px px-[24px] py-[10px] relative rounded-[50px] shrink-0">
                   <div className="content-stretch flex flex-[1_0_0] flex-col gap-[6px] items-end justify-center min-h-px min-w-px not-italic relative shrink-0 text-right whitespace-pre-wrap">
-                    <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] relative shrink-0 text-[#919191] text-[12.75px] w-full" dir="auto">
+                    <p className="font-IRANYekanXVF font-medium leading-[1.7] relative shrink-0 text-[#919191] text-[12.75px] w-full" dir="auto">
                       دانلود از
                     </p>
-                    <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] relative shrink-0 text-[#303030] text-[14px] w-full" dir="auto">
+                    <p className="font-IRANYekanXVF font-semibold leading-[normal] relative shrink-0 text-[#303030] text-[14px] w-full" dir="auto">
                       Google play
                     </p>
                   </div>
@@ -349,10 +349,10 @@ export default function Landing() {
                 </div>
                 <div className="bg-white box-border content-stretch flex flex-[1_0_0] gap-[16px] h-[72px] items-center justify-end min-h-px min-w-px px-[24px] py-[10px] relative rounded-[50px] shrink-0">
                   <div className="content-stretch flex flex-[1_0_0] flex-col gap-[6px] items-end min-h-px min-w-px not-italic relative shrink-0 text-right whitespace-pre-wrap">
-                    <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] relative shrink-0 text-[#919191] text-[12.75px] w-full" dir="auto">
+                    <p className="font-IRANYekanXVF font-medium leading-[1.7] relative shrink-0 text-[#919191] text-[12.75px] w-full" dir="auto">
                       دانلود از
                     </p>
-                    <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] relative shrink-0 text-[#303030] text-[14px] w-full" dir="auto">
+                    <p className="font-IRANYekanXVF font-semibold leading-[normal] relative shrink-0 text-[#303030] text-[14px] w-full" dir="auto">
                       لینک مستقیم اندروید
                     </p>
                   </div>
@@ -366,10 +366,10 @@ export default function Landing() {
               <div className="content-stretch flex gap-[15px] items-center relative shrink-0 w-full">
                 <div className="bg-white box-border content-stretch flex flex-[1_0_0] gap-[16px] h-[72px] items-center justify-end min-h-px min-w-px px-[24px] py-[10px] relative rounded-[50px] shrink-0">
                   <div className="content-stretch flex flex-[1_0_0] flex-col gap-[6px] items-end min-h-px min-w-px not-italic relative shrink-0 text-right whitespace-pre-wrap">
-                    <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] relative shrink-0 text-[#919191] text-[12.75px] w-full" dir="auto">
+                    <p className="font-IRANYekanXVF font-medium leading-[1.7] relative shrink-0 text-[#919191] text-[12.75px] w-full" dir="auto">
                       دانلود از
                     </p>
-                    <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] relative shrink-0 text-[#303030] text-[14px] w-full" dir="auto">
+                    <p className="font-IRANYekanXVF font-semibold leading-[normal] relative shrink-0 text-[#303030] text-[14px] w/full" dir="auto">
                       سیب اپ
                     </p>
                   </div>
@@ -379,10 +379,10 @@ export default function Landing() {
                 </div>
                 <div className="bg-white box-border content-stretch flex flex-[1_0_0] gap-[16px] h-[72px] items-center justify-end min-h-px min-w-px px-[24px] py-[10px] relative rounded-[50px] shrink-0">
                   <div className="content-stretch flex flex-[1_0_0] flex-col gap-[6px] items-end justify-center min-h-px min-w-px not-italic relative shrink-0 text-right whitespace-pre-wrap">
-                    <p className="font-['IRANYekanXVF:Medium',sans-serif] leading-[1.7] relative shrink-0 text-[#919191] text-[12.75px] w-full" dir="auto">
+                    <p className="font-IRANYekanXVF font-medium leading-[1.7] relative shrink-0 text-[#919191] text-[12.75px] w-full" dir="auto">
                       دانلود از
                     </p>
-                    <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] relative shrink-0 text-[#303030] text-[14px] w-full" dir="auto">
+                    <p className="font-IRANYekanXVF font-semibold leading-[normal] relative shrink-0 text-[#303030] text-[14px] w/full" dir="auto">
                       بازار
                     </p>
                   </div>
@@ -410,21 +410,21 @@ export default function Landing() {
         <div className="absolute bg-[#fff2f2] h-[518px] left-0 top-[139px] w-[1440px]">
           <div className="absolute content-stretch flex flex-col gap-[66px] items-center left-[323px] top-[82px] w-[794px]">
             <div className="content-stretch flex flex-col gap-[26px] items-center not-italic relative shrink-0 text-center w-full">
-              <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] relative shrink-0 text-[#303030] text-[23px]" dir="auto">
+              <p className="font-IRANYekanXVF font-semibold leading-[normal] relative shrink-0 text-[#303030] text-[23px]" dir="auto">
                 <span className="text-[#f42326]">نستک</span>، همراه وفادار صاحبان حیوانات خانگی
               </p>
-              <p className="font-['IRANYekanXVF:Regular',sans-serif] leading-[1.7] min-w-full relative shrink-0 text-[#919191] text-[14px] w-[min-content] whitespace-pre-wrap" dir="auto">
+              <p className="font-IRANYekanXVF font-normal leading-[1.7] min-w-full relative shrink-0 text-[#919191] text-[14px] w-[min-content] whitespace-pre-wrap" dir="auto">
                 نستک تجربه‌ای کامل برای صاحبان حیوانات خانگی فراهم کرده؛ یادآوری کارهای روزانه، گفت‌وگوی آنلاین با دامپزشک‌ها، واگذاری یا سرپرستی پت، خرید از پت‌شاپ و مطالعه مقالات آموزشی همین حالا ثبت‌نام کن و ۳۰ روز استفاده رایگان رو تجربه کن!
               </p>
             </div>
             <div className="content-stretch flex gap-[12px] items-center relative shrink-0">
               <div className="border border-[#f42326] border-solid box-border content-stretch flex gap-[8px] h-[52px] items-center justify-center p-[8px] relative rounded-[50px] shrink-0 w-[182px]">
-                <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[#f42326] text-[14px] text-center" dir="auto">
+                <p className="font-IRANYekanXVF font-semibold leading-[normal] not-italic relative shrink-0 text-[#f42326] text-[14px] text-center" dir="auto">
                   قوانین و مقررات
                 </p>
               </div>
               <div className="bg-[#f42326] box-border content-stretch flex gap-[8px] h-[52px] items-center justify-center p-[8px] relative rounded-[50px] shrink-0 w-[182px]">
-                <p className="font-['IRANYekanXVF:DemiBold',sans-serif] leading-[normal] not-italic relative shrink-0 text-[14px] text-center text-white" dir="auto">
+                <p className="font-IRANYekanXVF font-semibold leading-[normal] not-italic relative shrink-0 text-[14px] text-center text-white" dir="auto">
                   نصب اپلیکیشن
                 </p>
               </div>

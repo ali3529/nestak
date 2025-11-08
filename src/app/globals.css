@@ -24,6 +24,10 @@
 
   /* Optional accent */
   --color-accent-500: #22c55e;
+
+  /* Fonts */
+  /* Expose a Tailwind v4 font token so we can use `font-IRANYekanXVF` */
+  --font-IRANYekanXVF: var(--font-yekan), sans-serif;
 }
 
 /* Force light theme; do not switch on system dark mode */
@@ -32,4 +36,22 @@ body {
   background: var(--background);
   color: var(--foreground);
   /* Use font from next/font/local set on <body> class */
+}
+
+/* Map legacy arbitrary font classes to Tailwind utilities */
+@layer utilities {
+  /* DemiBold -> font-semibold */
+  .font-\[\'IRANYekanXVF\:DemiBold\',sans-serif\] {
+    @apply font-IRANYekanXVF font-semibold;
+  }
+
+  /* Medium -> font-medium */
+  .font-\[\'IRANYekanXVF\:Medium\',sans-serif\] {
+    @apply font-IRANYekanXVF font-medium;
+  }
+
+  /* Regular -> font-normal */
+  .font-\[\'IRANYekanXVF\:Regular\',sans-serif\] {
+    @apply font-IRANYekanXVF font-normal;
+  }
 }
