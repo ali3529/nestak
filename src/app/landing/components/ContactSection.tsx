@@ -1,78 +1,140 @@
 "use client";
 /* eslint-disable @next/next/no-img-element */
 
+import { Button } from "@/components/Button";
+
 export default function ContactSection() {
-  const img = "https://www.figma.com/api/mcp/asset/722f1364-7741-445f-9a3d-0742003acb3f";
-  const img1 = "https://www.figma.com/api/mcp/asset/7b13f7f3-9906-4a19-92d2-69ac685f5828";
-  const img2 = "https://www.figma.com/api/mcp/asset/19afc2da-9eca-4453-ba1e-c966c1ed372d";
-  const img3 = "https://www.figma.com/api/mcp/asset/dbd576ed-5658-41c9-be52-20d587094c49";
-  const imgHugeIconArrowsOutlineArrowLeft = "https://www.figma.com/api/mcp/asset/8e2c2970-b5ff-410d-b30b-b52f56e7d61c";
-
-  function HugeIconArrowsOutlineArrowLeftIcon({ className }: { className?: string }) {
-    return (
-      <div className={className}>
-        <img alt="" className="block max-w-none size-full" src={imgHugeIconArrowsOutlineArrowLeft} />
-      </div>
-    );
-  }
-
   return (
-    <div className="absolute h-[684px] left-0 overflow-clip top-[1961px] w-[1440px]">
-      <div className="absolute content-stretch flex flex-col gap-[20px] h-[125px] items-end left-[792px] not-italic text-right top-[79px] w-[493px]">
-        <p className="font-IRANYekanXVF font-semibold leading-[normal] relative shrink-0 text-[#303030] text-[20.5px] w-full whitespace-pre-wrap" dir="auto">ارتباط با ما</p>
-        <div className="flex-[1_0_0] font-IRANYekanXVF font-normal leading-[1.7] min-h-px min-w-px relative shrink-0 text-[#919191] text-[14px] w-full whitespace-pre-wrap">
-          <p className="mb-0" dir="auto">نظرتان برای ما ارزشمند است و دوست داریم تجربه شما و حیوان خانگی‌تان را بشنویم. تیم ما آماده است که پاسخگوی سوالات و مشکلات شما باشد.</p>
-          <p dir="auto">راه‌های ارتباطی مختلف را در اختیار شما قرار داده‌ایم تا راحت‌تر با ما در تماس باشید.</p>
-        </div>
-      </div>
-      <div className="absolute bg-[#f4f5f7] box-border content-stretch flex flex-col gap-[32px] items-end left-[155px] overflow-clip p-[32px] rounded-[30px] top-[79px] w-[560px]">
-        <div className="content-stretch flex flex-col gap-[24px] items-start relative shrink-0 w-full">
-          {[{label:'نام و نام خانودگی',ph:'نام خود را وارد کنید'},{label:'شماره تماس',ph:'شماره موبایل خود را وارد کنید'}].map((f)=> (
-            <div key={f.label} className="content-stretch flex flex-col gap-[12px] items-end relative shrink-0 w-full">
-              <p className="font-IRANYekanXVF font-medium leading-[normal] not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right w-full whitespace-pre-wrap" dir="auto">{f.label}</p>
-              <div className="bg-white box-border content-stretch flex gap-[8px] items-center justify-end overflow-clip pb-[24px] pt-[20px] px-[16px] relative rounded-[16px] shrink-0 w-full">
-                <p className="flex-[1_0_0] font-IRANYekanXVF font-medium leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[#919191] text-[14px] text-right whitespace-pre-wrap" dir="auto">{f.ph}</p>
+    <section className="w-full py-16">
+      <div className="px-6 md:px-12 lg:px-40">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+          {/* Right column: copy + contact info */}
+          <div className="flex-1 max-w-xl">
+            <h2 className="font-IRANYekanXVF font-semibold text-[20.5px] text-[#303030] mb-5 text-right">
+              ارتباط با ما
+            </h2>
+            <p className="font-IRANYekanXVF text-[14px] leading-7 text-[#919191] text-right mb-2">
+              نظراتتان برای ما ارزشمند است و دوست داریم تجربه شما از حیوانات
+              خانگی‌تان را بشنویم. تیم ما آماده است که به سوالات، مشکلات و
+              درخواست‌های شما پاسخ دهد.
+            </p>
+            <p className="font-IRANYekanXVF text-[14px] leading-7 text-[#919191] text-right mb-8">
+              راه‌های ارتباطی مختلفی را در اختیار شما قرار داده‌ایم تا راحت‌تر
+              با ما در تماس باشید.
+            </p>
+
+            <div className="flex flex-col items-start gap-6 text-[#303030] text-[14px]">
+              <div className="flex items-center justify-end gap-3">
+                <img
+                  src="/Icons/solid/mail.svg"
+                  alt="ایمیل"
+                  className="size-6"
+                />
+                <p className="font-IRANYekanXVF font-medium">
+                  nestak.info@gmail.com
+                </p>
+              </div>
+
+              <div className="flex items-center justify-end gap-3">
+                <img
+                  src="/Icons/solid/call.svg"
+                  alt="تلفن"
+                  className="size-6"
+                />
+                <p className="font-IRANYekanXVF font-medium">
+                  011 2645 33 17 - 0912 649 12 18
+                </p>
+              </div>
+
+              <div className="flex items-center justify-end gap-3">
+                <img
+                  src="/Icons/solid/location.svg"
+                  alt="آدرس"
+                  className="size-6"
+                />
+                <p className="font-IRANYekanXVF font-medium">
+                  تهران، خ انقلاب، کوچه بهشتی، پلاک ۱۸
+                </p>
+              </div>
+
+              <div className="flex items-start justify-end gap-3">
+                <img
+                  src="/Icons/solid/clock-circle.svg"
+                  alt="ساعت کاری"
+                  className="size-6"
+                />
+                <div className="flex flex-col items-end gap-1 ">
+                  <p className="font-IRANYekanXVF font-medium">
+                    شنبه تا چهارشنبه:
+                  </p>
+                  <div className="flex items-center gap-1 font-IRANYekanXVF font-medium">
+                    <span>08:00</span>
+                    <span>الی</span>
+                    <span>20:00</span>
+                  </div>
+                </div>
               </div>
             </div>
-          ))}
-          <div className="content-stretch flex flex-col gap-[12px] items-end relative shrink-0 w-full">
-            <p className="font-IRANYekanXVF font-medium leading-[normal] not-italic relative shrink-0 text-[#303030] text-[15.25px] text-right w-full whitespace-pre-wrap" dir="auto">پیام شما</p>
-            <div className="bg-white box-border content-stretch flex gap-[8px] h-[116px] items-start justify-center overflow-clip px-[16px] py-[24px] relative rounded-[16px] shrink-0 w-full">
-              <p className="flex-[1_0_0] font-IRANYekanXVF font-medium leading-[normal] min-h-px min-w-px not-italic relative shrink-0 text-[#919191] text-[14px] text-right whitespace-pre-wrap" dir="auto">متن پیام خود را بنویسید...</p>
+          </div>
+
+          {/* Left column: form card */}
+          <div className="w-full lg:max-w-[560px]">
+            <div className="bg-[#F4F5F7] rounded-[30px] p-6 md:p-8 flex flex-col gap-8">
+              <div className="flex flex-col gap-6">
+                {/* Name */}
+                <div className="flex flex-col items-start gap-3">
+                  <label className="font-IRANYekanXVF font-medium text-[15.25px] text-[#303030]">
+                    نام و نام خانوادگی
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="نام خود را وارد کنید"
+                    className="w-full bg-white rounded-2xl py-5 px-4 text-right font-IRANYekanXVF placeholder:text-[#919191] text-[14px] outline-none"
+                  />
+                </div>
+
+                {/* Phone */}
+                <div className="flex flex-col items-start gap-3">
+                  <label className="font-IRANYekanXVF font-medium text-[15.25px] text-[#303030]">
+                    شماره تماس
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="شماره موبایل خود را وارد کنید"
+                    className="w-full bg-white rounded-2xl py-5 px-4 text-right font-IRANYekanXVF placeholder:text-[#919191] text-[14px] outline-none"
+                  />
+                </div>
+
+                {/* Message */}
+                <div className="flex flex-col items-start gap-3">
+                  <label className="font-IRANYekanXVF font-medium text-[15.25px] text-[#303030]">
+                    پیام شما
+                  </label>
+                  <textarea
+                    rows={4}
+                    placeholder="متن پیام خود را بنویسید..."
+                    className="w-full bg-white rounded-2xl py-5 px-4 text-right font-IRANYekanXVF placeholder:text-[#919191] text-[14px] outline-none"
+                  />
+                </div>
+              </div>
+
+              <div className="flex justify-start">
+                <Button
+                  title="ارسال پیام"
+                  endIcon={
+                    <img
+                      src="/Icons/solid/arrow-left-white.svg"
+                      alt="ارسال"
+                      className="size-6"
+                    />
+                  }
+                />
+              </div>
             </div>
           </div>
         </div>
-        <div className="bg-[#f42326] box-border content-stretch flex gap-[6px] h-[52px] items-center justify-center p-[8px] relative rounded-[50px] shrink-0 w-[182px]">
-          <div className="flex items-center justify-center relative shrink-0 size-[24px]">
-            <div className="flex-none rotate-[90deg] scale-y-[-100%]">
-              <div className="relative size-[24px]"><img alt="" className="block max-w-none size-full" src={imgHugeIconArrowsOutlineArrowLeft} /></div>
-            </div>
-          </div>
-          <p className="font-IRANYekanXVF font-semibold leading-[normal] not-italic relative shrink-0 text-[14px] text-center text-white" dir="auto">ارسال پیام</p>
-        </div>
       </div>
-      <div className="absolute box-border content-stretch flex flex-col gap-[25px] items-end left-[915px] px-0 py-[24px] top-[243px] w-[370px]">
-        <div className="content-stretch flex gap-[12px] items-center justify-end relative shrink-0">
-          <p className="font-IRANYekanXVF font-medium leading-[1.7] not-italic relative shrink-0 text-[#303030] text-[14px] text-right" dir="auto">nestak.info@gmail.com</p>
-          <div className="overflow-clip relative shrink-0 size-[24px]"><div className="absolute inset-[12.5%_8.33%]"><img alt="" className="block max-w-none size-full" src={img} /></div></div>
-        </div>
-        <div className="content-stretch flex gap-[12px] items-center justify-end relative shrink-0">
-          <p className="font-IRANYekanXVF font-medium leading-[1.7] not-italic relative shrink-0 text-[#303030] text-[14px] text-right" dir="auto">011 2645 33 17 - 0912 649 12 18</p>
-          <div className="overflow-clip relative shrink-0 size-[24px]"><div className="absolute inset-[12.5%]"><img alt="" className="block max-w-none size-full" src={img1} /></div></div>
-        </div>
-        <div className="content-stretch flex gap-[12px] items-center justify-end relative shrink-0 w-full">
-          <p className="font-IRANYekanXVF font-medium leading-[1.7] not-italic relative shrink-0 text-[#303030] text-[14px] text-right" dir="auto">تهران، خ انقلاب، کوچه بنفشه، پلاک18</p>
-          <div className="overflow-clip relative shrink-0 size-[24px]"><div className="absolute inset-[8.33%_12.5%]"><img alt="" className="block max-w-none size-full" src={img2} /></div></div>
-        </div>
-        <div className="content-stretch flex gap-[12px] items-start justify-end relative shrink-0">
-          <div className="content-stretch flex flex-col gap-[9px] items-end relative shrink-0 w-[116px]">
-            <p className="font-IRANYekanXVF font-medium leading-[1.7] min-w-full not-italic relative shrink-0 text-[#303030] text-[14px] text-right w-[min-content] whitespace-pre-wrap" dir="auto">شنبه - چهارشنبه:</p>
-            <div className="content-stretch flex font-IRANYekanXVF font-medium gap-[4px] items-center leading-[1.7] not-italic relative shrink-0 text-[#303030] text-[14px] text-right"><p className="relative shrink-0" dir="auto">20:00</p><p className="relative shrink-0" dir="auto">الی</p><p className="relative shrink-0" dir="auto">08:00</p></div>
-          </div>
-          <div className="overflow-clip relative shrink-0 size-[24px]"><div className="absolute inset-[8.33%]"><div className="absolute inset-0" style={{ ["--fill-0" as any]: "rgba(244, 35, 38, 1)" }}><img alt="" className="block max-w-none size-full" src={img3} /></div></div></div>
-        </div>
-      </div>
-    </div>
+    </section>
   );
 }
 
