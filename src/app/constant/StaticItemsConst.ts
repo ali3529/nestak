@@ -40,3 +40,27 @@ export const WHY_CHOOSE_ITEMS = [
     desc: "با ۳۰ روز حساب رایگان، بدون محدودیت امکانات رو امتحان کن و لذت داشتن یه همراه واقعی برای پتت رو تجربه کن.",
   },
 ];
+
+
+export const downloads = [
+    {
+      title: "لینک مستقیم اندروید",
+      subtitle: "دانلود از",
+      icon: "/icons/solid/download-black.svg",
+    },
+  {
+    title: "Google play",
+    subtitle: "دانلود از",
+    icon: "/icons/Colors/google-play.svg",
+  },
+  {
+    title: "بازار",
+    subtitle: "دانلود از",
+    icon: "/icons/Colors/cafe-bazar.svg",
+  },
+  {
+    title: "سیب اپ",
+    subtitle: "دانلود از",
+    icon: "/icons/Colors/sibapp-seeklogo.svg",
+  },
+];
