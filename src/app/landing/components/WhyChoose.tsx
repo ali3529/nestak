@@ -6,45 +6,51 @@ import { WHY_CHOOSE_ITEMS } from "@/app/constant/StaticItemsConst";
 
 export default function WhyChoose() {
   return (
-    <div className=" bg-[#f4f5f7] w-full relative flex-row flex-col pt-24 px-40 pb-14">
-      <p className=" font-IRANYekanXVF font-semibold not-italic text-[#303030] text-[20.5px] text-right pb-4 ">
-        <span>{`چرا `}</span>
-        <span className="text-[#f42326]">نستک</span>
-        <span>{` رو انتخاب کنم؟`}</span>
-      </p>
-      <p className=" font-IRANYekanXVF font-normal  text-[#919191] text-[14px] text-right  whitespace-pre-wrap pb-8">
-        با یادآورهای دقیق، ارتباط سریع با دامپزشک‌ها و امکانات متنوع خرید و
-        سرپرستی، دیگه هیچ دغدغه‌ای برای مراقبت از پتت نداری.
-      </p>
+    <section className="bg-[#f4f5f7]">
+      <div className="mx-auto flex w-full max-w-[1100px] flex-col items-center px-4 pb-16 pt-14 text-center sm:px-8 lg:px-24">
+        <div className="flex w-full max-w-[640px] flex-col gap-3">
+          <p className="font-IRANYekanXVF text-[20px] font-semibold text-[#303030] sm:text-[22px]">
+            <span>{`چرا `}</span>
+            <span className="text-[#f42326]">نستک</span>
+            <span>{` رو انتخاب کنم؟`}</span>
+          </p>
+          <p className="font-IRANYekanXVF text-[14px] font-normal leading-[30px] text-[#919191]">
+            با یادآورهای دقیق، ارتباط سریع با دامپزشک‌ها و امکانات متنوع خرید و
+            سرپرستی، دیگه هیچ دغدغه‌ای برای مراقبت از پتت نداری.
+          </p>
+        </div>
 
-      <div className="grid grid-cols-3 gap-2.5 items-center relative w-full">
-        {WHY_CHOOSE_ITEMS.map((c, idx) => (
-          <div
-            key={idx}
-            className="bg-white border border-[#f5f4f2] border-solid relative rounded-[50px]  w-full h-full"
-          >
-            <div className="box-border content-stretch flex flex-col gap-[35px] ] items-center overflow-clip p-10 relative rounded-[inherit] ">
-              <div className="overflow-clip relative  size-[62px]">
-                <img alt="" className=" max-w-none size-full" src={c.img} />
+        <div className="mt-10 grid w-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {WHY_CHOOSE_ITEMS.map((item) => (
+            <article
+              key={item.title}
+              className="flex h-full flex-col items-center rounded-[32px] border border-white bg-white px-6 py-8 text-center shadow-[0_20px_45px_rgba(26,31,64,0.05)] sm:px-8"
+            >
+              <div className="flex size-[62px] items-center justify-center rounded-[22px] bg-[#f4f5f7]">
+                <img
+                  alt=""
+                  className="h-9 w-9 object-contain"
+                  src={item.img}
+                />
               </div>
-              <div className="content-stretch flex flex-col gap-[12px] items-center leading-[1.7] not-italic relative shrink-0 text-center w-full whitespace-pre-wrap">
+              <div className="mt-6 flex flex-col gap-3">
                 <p
-                  className="font-IRANYekanXVF font-semibold relative shrink-0 text-[#303030] text-[15.25px] w-full"
+                  className="font-IRANYekanXVF text-[15.25px] font-semibold text-[#303030]"
                   dir="auto"
                 >
-                  {c.title}
+                  {item.title}
                 </p>
                 <p
-                  className="font-IRANYekanXVF font-normal relative shrink-0 text-[#919191] text-[14px] w-full"
+                  className="font-IRANYekanXVF text-[14px] font-normal leading-[28px] text-[#919191]"
                   dir="auto"
                 >
-                  {c.desc}
+                  {item.desc}
                 </p>
               </div>
-            </div>
-          </div>
-        ))}
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

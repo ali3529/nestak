@@ -43,20 +43,20 @@ export const WHY_CHOOSE_ITEMS = [
 
 
 export const downloads = [
-    {
-      title: "لینک مستقیم اندروید",
-      subtitle: "دانلود از",
-      icon: "/icons/solid/download-black.svg",
-    },
   {
-    title: "Google play",
+    title: "لینک مستقیم اندروید",
     subtitle: "دانلود از",
-    icon: "/icons/Colors/google-play.svg",
+    icon: "/icons/solid/download-black.svg",
   },
   {
     title: "بازار",
     subtitle: "دانلود از",
     icon: "/icons/Colors/cafe-bazar.svg",
+  },
+  {
+    title: "Google play",
+    subtitle: "دانلود از",
+    icon: "/icons/Colors/google-play.svg",
   },
   {
     title: "سیب اپ",
