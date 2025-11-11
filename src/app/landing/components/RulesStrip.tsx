@@ -20,37 +20,7 @@ export default function RulesStrip({ content, enamadLink }: RulesStripProps) {
     <section className="relative w-full px-4 py-8 md:px-8 lg:px-[155px] lg:py-16">
       <div className="mx-auto max-w-[1440px]">
         {/* Main content area */}
-        <div className="flex flex-col-reverse lg:flex-row-reverse gap-6 lg:gap-10 items-start">
-          {/* Content */}
-          <div className="flex-1 flex flex-col gap-4">
-            <h2 className="font-IRANYekanXVF font-semibold leading-normal text-white-700 text-[20.5px] text-right">
-              قوانین و مقررات
-            </h2>
-
-            <p
-              className={`font-IRANYekanXVF font-normal leading-[1.7] text-white-500 text-[14px] text-right whitespace-pre-wrap ${
-                isExpanded ? "" : "line-clamp-2 lg:line-clamp-3"
-              }`}
-            >
-              {fullText}
-            </p>
-
-            {/* Toggle Button */}
-            <button
-              onClick={() => setIsExpanded(!isExpanded)}
-              className="flex flex-row-reverse items-center justify-end gap-2 self-start hover:opacity-80 transition-opacity"
-            >
-              <p className="font-IRANYekanXVF font-medium leading-[1.7] text-primary-500 text-[12.75px]">
-                {isExpanded ? "بستن" : "بیشتر"}
-              </p>
-              <img
-                alt=""
-                className="shrink-0 size-5"
-                src="/Icons/solid/arrow-left.svg"
-              />
-            </button>
-          </div>
-
+        <div className="flex flex-row-reverse lg:flex-row-reverse gap-6 lg:gap-10 items-start relative">
           {/* E-namad Badge */}
           {enamadLink ? (
             <a
@@ -78,17 +48,53 @@ export default function RulesStrip({ content, enamadLink }: RulesStripProps) {
               </div>
             </div>
           )}
-        </div>
+          {/* Content */}
+          <div className="flex-1 flex flex-col gap-4">
+            <h2 className="font-IRANYekanXVF font-semibold leading-normal text-white-700 text-[20.5px] text-right">
+              قوانین و مقررات
+            </h2>
 
-        {/* Trust Badges Strip */}
-        <div className="mt-8 lg:mt-12 w-full max-w-[940px] lg:ml-[136px]">
-          <div className="relative h-[46px] w-full">
+            <p
+              className={`font-IRANYekanXVF font-normal leading-[1.7] text-white-500 text-[14px] text-right whitespace-pre-wrap ${
+                isExpanded ? "" : "line-clamp-2 lg:line-clamp-3"
+              }`}
+            >
+              {fullText}
+            </p>
+
+            {/* Toggle Button */}
+            <button
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="flex flex-row-reverse items-center justify-end  self-start hover:opacity-80 transition-opacity"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className={`${isExpanded?"rotate-90":""}`}
+              >
+                <path
+                  d="M12.155 13.776C12.3707 14.0456 12.3269 14.4393 12.0574 14.6549C11.7878 14.8706 11.3941 14.8268 11.1785 14.5573L7.84513 10.3906C7.66253 10.1623 7.66252 9.83761 7.84513 9.60935L11.1785 5.44269C11.3941 5.17315 11.7878 5.1294 12.0574 5.34503C12.3269 5.56066 12.3707 5.9544 12.155 6.22394L9.1342 9.99998L12.155 13.776Z"
+                  fill="#F42326"
+                />
+              </svg>
+              <p className="font-IRANYekanXVF font-medium leading-[1.7] text-primary-500 text-[12.75px]">
+                {isExpanded ? "بستن" : "بیشتر"}
+              </p>
+            </button>
+          </div>
+          {/* Trust Badges Strip */}
+          {/* <div className="mt-8 lg:mt-12 w-full  lg:ml-[136px] absolute bottom-0">
+          <div className="relative h-[46px] w-full ">
             <img
               alt="Trust badges"
-              className="absolute inset-0 max-w-none object-contain object-left size-full"
+              className=" inset-0 max-w-none object-contain object-left size-full"
               src={imgTrustBadges}
             />
           </div>
+        </div> */}
         </div>
       </div>
     </section>

@@ -45,29 +45,15 @@ export default function Hero({ title, subtitle }: HeroProps) {
         <div className="mt-6 flex w-full flex-row items-stretch gap-3 sm:mt-8 sm:flex-row sm:items-center sm:justify-center sm:gap-4">
           <Button
             title="نصب اپلیکیشن"
-            icon={
-              <svg
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 17L7 12H10V8H14V12H17L12 17Z"
-                  fill="white"
-                />
-              </svg>
-            }
             className="shadow-[0_10px_25px_rgba(244,35,38,0.2)] w-full sm:w-[197px] hidden md:block"
           />
           <Button
             title="نصب اپلیکیشن"
-            className="shadow-[0_10px_25px_rgba(244,35,38,0.2)] w-full lg:w-[197px] h-[42px]!"
+            className="shadow-[0_10px_25px_rgba(244,35,38,0.2)] w-full lg:w-[197px] h-[42px]!  md:hidden block"
           />
           <Button
             title="قوانین و مقررات"
-            className="!bg-transparent !border !border-[#f42326] hover:!bg-[#f42326] [&_p]:text-[#f42326] h-[42px]!  hover:[&_p]:!text-white [&_p]:transition-colors w-full sm:w-[197px]"
+            className="!bg-transparent !border !border-[#f42326] hover:!bg-[#f42326] [&_p]:text-[#f42326] h-[42px]! lg:h-[58px]!  hover:[&_p]:!text-white [&_p]:transition-colors w-full sm:w-[197px]"
           />
         </div>
       </div>

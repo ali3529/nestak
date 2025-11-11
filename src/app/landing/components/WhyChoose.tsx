@@ -53,16 +53,17 @@ export default function WhyChoose({ title, subtitle, features }: WhyChooseProps)
           {items.map((item) => (
             <article
               key={item.title}
-              className="flex h-full flex-col items-center rounded-[20px] lg:rounded-[32px] border border-white px-3 py-4 bg-white lg:px-6 lg:py-8 text-center shadow-[0_20px_45px_rgba(26,31,64,0.05)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_50px_rgba(26,31,64,0.08)] sm:px-8"
+              className="flex h-full flex-col items-center rounded-[20px] lg:rounded-[32px] border border-white px-3 py-4 bg-white lg:px-6 lg:py-8 text-center 
+               transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_25px_50px_rgba(26,31,64,0.08)] sm:px-8 cursor-pointer"
             >
-              <div className="flex size-[36px] lg:size-[62px] items-center justify-center rounded-[22px] bg-[#f4f5f7]">
+              <div className="flex size-[36px] lg:size-[62px] items-center justify-center rounded-[22px] ">
                 <img
                   alt=""
-                  className="h-9 w-9 object-contain"
+                  className="w-full h-full object-contain"
                   src={item.img}
                 />
               </div>
-              <div className="mt-6 flex flex-col gap-3">
+              <div className="mt-6 lg:mt-8 flex flex-col gap-3">
                 <p
                   className="font-IRANYekanXVF text-[12.75px] lg:text-[15.25px] font-semibold text-[#303030]"
                   dir="auto"

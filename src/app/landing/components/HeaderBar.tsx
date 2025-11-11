@@ -46,7 +46,7 @@ export default function HeaderBar() {
               key={t}
               type="button"
               onClick={() => handleNavigate(t)}
-              className="font-IRANYekanXVF font-bold text-[#5d5d5d] text-[15.25px] text-right transition hover:text-[#f42326]"
+              className="font-IRANYekanXVF font-bold text-[#5d5d5d] text-[15.25px] text-right cursor-pointer transition hover:text-[#f42326]"
               dir="auto"
             >
               {t}
