@@ -1,182 +1,59 @@
-import Image from "next/image";
-import Link from "next/link";
-import FaqItem from "@/components/FaqItem";
+import HeaderBar from "./landing/components/HeaderBar";
+import FooterSection from "./landing/components/FooterSection";
+import RulesStrip from "./landing/components/RulesStrip";
+import ContactSection from "./landing/components/ContactSection";
+import FAQSection from "./landing/components/FAQSection";
+import WhyChoose from "./landing/components/WhyChoose";
+import AppDownload from "./landing/components/AppDownload";
+import Hero from "./landing/components/Hero";
+import { fetchLandingData } from "@/services/landingApi";
 
-export default function Home() {
+export default async function Landing() {
+  const landingData = await fetchLandingData();
+
   return (
-    <div className="min-h-screen bg-white text-zinc-900">
-      {/* Top Nav */}
-      <header className="z-30 border-b border-zinc-100/70 bg-primary-50">
-        <div className="mx-auto grid max-w-6xl grid-cols-3 items-center px-6 py-4">
-          <div className="flex items-center justify-start">
-            <Link
-              href="#download"
-              className="inline-flex items-center gap-2 rounded-full bg-primary-600 px-6 py-3 text-xs text-white shadow-sm hover:bg-primary-500"
-            >
-              نصب اپلیکیشن
-              <Image src="/Icons/solid/download.svg" alt="" width={16} height={16} sizes="16px" />
-            </Link>
-          </div>
-          <nav className="hidden items-center justify-center gap-14 text-sm font-medium text-zinc-700 sm:flex">
-            <Link href="#about" className="hover:text-primary-600">معرفی</Link>
-            <Link href="#contact" className="hover:text-primary-600">تماس با ما</Link>
-            <Link href="#faq" className="hover:text-primary-600">سوالات متداول</Link>
-            <Link href="#rules" className="hover:text-primary-600">قوانین و مقررات</Link>
-          </nav>
-          <div className="flex items-center justify-end">
-            <Image src="/Icons/Colors/Nestap Logo Icon SVG 1.svg" alt="Nestak" width={40} height={40} sizes="40px" />
-          </div>
+    <div className="bg-white w-full h-full ">
+      <div className=" max-w-[1440px] mx-auto relative">
+        <HeaderBar />
+        <div id="intro-section">
+          <Hero
+            title={landingData?.mainTitle}
+            subtitle={landingData?.mainSubTitle}
+          />
         </div>
-      </header>
-
-      {/* Hero */}
-      <section id="about" className="relative isolate overflow-hidden bg-gradient-to-b from-primary-50 to-white">
-        <div className="mx-auto max-w-3xl px-6 py-14 text-center sm:py-16">
-          <h2 className="text-sm font-semibold text-primary-600">نسک، همراه وفادار صاحبان حیوانات خانگی</h2>
-          <p className="mt-3 text-xs leading-6 text-zinc-600">
-            با نسک می‌توانید به سرعت خدمات مورد نیاز برای حیوانات خانگی را پیدا کنید، با ارائه‌دهندگان ارتباط بگیرید، و از آموزش‌ها و مقالات مفید بهره‌مند شوید.
-          </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
-            <Link href="#download" className="rounded-full bg-primary-600 px-5 py-2 text-xs text-white hover:bg-primary-500">نصب اپلیکیشن</Link>
-            <Link href="#download" className="rounded-full border border-zinc-300 px-5 py-2 text-xs text-zinc-700 hover:bg-zinc-50">لینک‌های مارکت</Link>
-          </div>
+        <WhyChoose
+          title={landingData?.featureTitle}
+          subtitle={landingData?.featureSubTitle}
+          features={landingData?.feature}
+        />
+        <AppDownload
+          bazzar={landingData?.bazzar}
+          sibapp={landingData?.sibapp}
+          googlePlay={landingData?.googlePlay}
+          directApkLink={landingData?.directApkLink}
+        />
+        <div id="contact-section">
+          <ContactSection
+            email={landingData?.email}
+            phone={landingData?.phone}
+            address={landingData?.address}
+          />
         </div>
-        {/* Pets peek illustration */}
-        <div className="relative mx-auto max-w-6xl px-6 pb-10">
-          <div className="pointer-events-none absolute inset-x-0 -bottom-6 mx-auto hidden h-8 w-full max-w-5xl rounded-2xl bg-white shadow-sm ring-1 ring-zinc-100 sm:block" />
-          <div className="relative z-10 mx-auto grid max-w-5xl grid-cols-3 gap-4 py-4">
-            <div className="col-span-1 hidden items-end sm:flex">
-              <Image src="/img/cHJpdmF0ZS5n 1.png" alt="cat" width={220} height={160} sizes="220px" className="h-auto w-[220px]" />
-            </div>
-            <div className="col-span-1 flex items-end justify-center">
-              <Image src="/img/-Pngtree-dogs and cats  dogs_119553 1.png" alt="pets" width={320} height={200} sizes="320px" className="h-auto w-[320px]" />
-            </div>
-            <div className="col-span-1 hidden items-end justify-end sm:flex">
-              <Image src="/img/cHJpdmF0ZS5n 1.png" alt="cat" width={220} height={160} sizes="220px" className="h-auto w-[220px]" />
-            </div>
-          </div>
+        <div id="faq-section">
+          <FAQSection faqList={landingData?.faq} />
         </div>
-        <div className="mx-auto max-w-6xl px-6 pb-10">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { icon: "/Icons/solid/clock-circle.svg", title: "پشتیبانی سریع و حرفه‌ای", desc: "زمان کمی دارید؟ با خیال راحت به نسک بسپارید." },
-              { icon: "/Icons/solid/mail.svg", title: "مشاوره و گفتگو با کارشناسان", desc: "در هر زمان می‌توانید سوال بپرسید و راهنمایی بگیرید." },
-              { icon: "/Icons/solid/download.svg", title: "ثبت سفارش و پیگیری", desc: "خرید غذا، ثبت نوبت و پیگیری سفارش‌ها به سادگی." },
-              { icon: "/Icons/Colors/gift.svg", title: "تجربه راحت و عضویت رایگان", desc: "با ۳۰ روز تجربه رایگان، همه امکانات در دسترس شماست." },
-              { icon: "/Icons/Colors/open-book.svg", title: "مقالات و آموزش‌های مفید", desc: "مجموعه‌ای از مطالب کاربردی برای نگهداری بهتر." },
-              { icon: "/Icons/Colors/heart-hands.svg", title: "واگذاری و سرپرستی حیوانات", desc: "اگر به دنبال سرپرستی یا واگذاری هستید، این‌جا شروع کنید." },
-            ].map((f) => (
-              <div key={f.title} className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
-                <Image src={f.icon} alt="" width={32} height={32} sizes="32px" />
-                <h3 className="mt-3 text-sm font-semibold">{f.title}</h3>
-                <p className="mt-1 text-xs text-zinc-600">{f.desc}</p>
-              </div>
-            ))}
-          </div>
+        <div id="rules-section">
+          <RulesStrip
+            content={landingData?.privacyPolicy}
+            enamadLink={landingData?.enamad}
+          />
         </div>
-      </section>
-
-      {/* Download */}
-      <section id="download" className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-8 px-6 py-16 sm:grid-cols-2">
-        <div className="order-2 sm:order-1">
-          <h3 className="text-base font-semibold">دانلود اپلیکیشن <span className="text-primary-600">نسک</span></h3>
-          <p className="mt-2 text-xs leading-6 text-zinc-600">امکانات متنوع برای مدیریت بهتر زندگی همراه حیوانات شما.</p>
-          <div className="mt-5 grid gap-3 sm:max-w-sm">
-            <Link href="#" className="flex items-center justify-between rounded-xl border border-zinc-200 px-4 py-3 text-xs hover:bg-zinc-50">
-              <span>Google play</span>
-              <Image src="/Icons/Colors/google play.svg" alt="Google Play" width={110} height={30} sizes="110px" />
-            </Link>
-            <div className="grid grid-cols-2 gap-3">
-              <Link href="#" className="rounded-xl border border-zinc-200 px-4 py-3 text-center text-xs hover:bg-zinc-50">لینک مستقیم اندروید</Link>
-              <Link href="#" className="rounded-xl border border-zinc-200 px-4 py-3 text-center text-xs hover:bg-zinc-50">بازار</Link>
-            </div>
-          </div>
-        </div>
-        <div className="order-1 sm:order-2">
-          <div className="relative mx-auto max-w-md">
-            <Image src="/img/iPhone 16 Light.png" alt="اپ پیش‌نمایش" width={560} height={900} className="h-auto w-full" sizes="(max-width: 640px) 90vw, 560px" />
-          </div>
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section id="contact" className="bg-zinc-50 py-16">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 sm:grid-cols-2">
-          <form className="rounded-2xl border border-zinc-200 bg-white p-6">
-            <div className="space-y-4">
-              <div>
-                <label className="mb-1 block text-xs">نام و نام خانوادگی</label>
-                <input className="w-full rounded-xl border border-zinc-300 px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-primary-500" placeholder="نام خود را وارد کنید" />
-              </div>
-              <div>
-                <label className="mb-1 block text-xs">شماره تماس</label>
-                <input className="w-full rounded-xl border border-zinc-300 px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-primary-500" placeholder="شماره موبایل خود را وارد کنید" />
-              </div>
-              <div>
-                <label className="mb-1 block text-xs">پیام شما</label>
-                <textarea rows={4} className="w-full rounded-xl border border-zinc-300 px-3 py-2 text-xs outline-none focus:ring-2 focus:ring-primary-500" placeholder="متن پیام خود را بنویسید..." />
-              </div>
-              <button type="button" className="rounded-full bg-primary-600 px-5 py-2 text-xs text-white hover:bg-primary-500">ارسال پیام</button>
-            </div>
-          </form>
-          <div className="flex flex-col justify-center gap-3 text-xs">
-            <h3 className="mb-2 text-base font-semibold">ارتباط با ما</h3>
-            <p className="text-zinc-600">نظرات، پیشنهادات و سوالات خود را با ما در میان بگذارید.</p>
-            <div className="mt-2 space-y-2">
-              <div className="flex items-center gap-2"><Image src="/Icons/solid/mail.svg" alt="mail" width={16} height={16} /> nestak.info@gmail.com</div>
-              <div className="flex items-center gap-2"><Image src="/Icons/solid/call.svg" alt="phone" width={16} height={16} /> 09123456789</div>
-              <div className="flex items-center gap-2"><Image src="/Icons/solid/location.svg" alt="loc" width={16} height={16} /> تهران، خیابان انقلاب، کوچه هشتم، پلاک ۱۸</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <section id="faq" className="mx-auto max-w-6xl px-6 py-16">
-        <h3 className="mb-6 text-base font-semibold">سوالات متداول</h3>
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="space-y-3">
-            <FaqItem question="چگونه می‌توانم با دامپزشک آنلاین صحبت کنم؟" answer="از بخش گفتگو وارد شوید و دامپزشک مورد نظر را انتخاب کنید. سپس سوال خود را ارسال نمایید." />
-            <FaqItem question="چگونه می‌توانم حیوان خانگی خود را واگذار کنم؟" answer="در بخش واگذاری فرم مربوطه را تکمیل کنید تا آگهی شما بررسی و منتشر شود." />
-            <FaqItem question="اپلیکیشن چه امکاناتی دارد؟" answer="جستجو خدمات، رزرو نوبت، گفتگوی تخصصی، خرید و پرداخت، پیگیری سفارش و موارد بیشتر." />
-          </div>
-          <div className="space-y-3">
-            <FaqItem question="آیا می‌توانم پروفایل مخصوص حیوان خانگی تنظیم کنم؟" answer="بله؛ می‌توانید اطلاعات، نژاد، تاریخ واکسیناسیون و یادآورها را ثبت کنید." />
-            <FaqItem question="آیا می‌توانم از طریق اپلیکیشن خرید کنم؟" answer="بله؛ امکان خرید از فروشگاه‌های همکار و پرداخت امن فراهم است." />
-            <FaqItem question="اپلیکیشن چه امکاناتی دارد؟" answer="مدیریت مخاطبین، ذخیره آدرس‌ها و اعلان‌های هوشمند نیز موجود است." />
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer id="rules" className="border-t border-zinc-200 py-10">
-        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 sm:grid-cols-3">
-          <div>
-            <h4 className="mb-3 text-sm font-semibold">دسترسی سریع</h4>
-            <ul className="space-y-2 text-xs text-zinc-600">
-              <li><Link href="#contact">تماس با ما</Link></li>
-              <li><Link href="#faq">سوالات متداول</Link></li>
-              <li><Link href="#rules">قوانین و مقررات</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h4 className="mb-3 text-sm font-semibold">ارتباط با ما</h4>
-            <ul className="space-y-2 text-xs text-zinc-600">
-              <li>nestak.info@gmail.com</li>
-              <li>09123456789</li>
-              <li>تهران، خیابان انقلاب، کوچه هشتم، پلاک ۱۸</li>
-            </ul>
-          </div>
-          <div className="flex items-center justify-end gap-6">
-            <Image src="/img/enamad-1-300x231 1.png" alt="اینماد" width={64} height={48} sizes="64px" className="h-auto w-16" />
-            <Image src="/Icons/Colors/Nestap Logo Icon SVG 1.svg" alt="لوگو" width={40} height={40} sizes="40px" />
-          </div>
-        </div>
-        <div className="mx-auto mt-6 flex max-w-6xl items-center justify-between px-6 text-[11px] text-zinc-500">
-          <span>© {new Date().getFullYear()} تمامی حقوق متعلق به نسک می‌باشد.</span>
-          <Link href="#download" className="text-primary-600">نصب اپلیکیشن</Link>
-        </div>
-      </footer>
+        <FooterSection
+          email={landingData?.email}
+          phone={landingData?.phone}
+          address={landingData?.address}
+        />
+      </div>
     </div>
   );
 }
