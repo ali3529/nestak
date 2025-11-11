@@ -13,10 +13,12 @@ export default function WhyChoose({ title, subtitle, features }: WhyChooseProps)
   const defaultTitle = "چرا نستک رو انتخاب کنم؟";
   const defaultSubtitle = "با یادآورهای دقیق، ارتباط سریع با دامپزشک‌ها و امکانات متنوع خرید و سرپرستی، دیگه هیچ دغدغه‌ای برای مراقبت از پتت نداری.";
 
+  const imageBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "https://serv.nestak.ir/uploads/";
+
   // Transform API features to component format
   const items = features && features.length > 0
     ? features.map((f) => ({
-        img: f.icon,
+        img: `${imageBaseUrl}${f.icon}`,
         title: f.title,
         desc: f.text,
       }))
