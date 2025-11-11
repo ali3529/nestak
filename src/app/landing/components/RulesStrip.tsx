@@ -9,7 +9,6 @@ interface RulesStripProps {
 
 export default function RulesStrip({ content, enamadLink }: RulesStripProps) {
   const imgEnamad = "/img/enamad-1-300x231-1.png";
-  const imgTrustBadges = "/img/figma/frame53.png";
 
   const [isExpanded, setIsExpanded] = useState(false);
 
