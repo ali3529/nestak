@@ -9,17 +9,20 @@ interface ButtonProps {
 
 export const Button: FC<ButtonProps> = ({ title, icon, endIcon, className }) => {
   const baseClasses =
-    "bg-[#f42326] hover:opacity-80 transition-all hover:ease-in-out flex gap-2 h-[58px] items-center justify-center rounded-[50px] w-[197px] cursor-pointer";
+    "bg-[#f42326] hover:bg-[#ff6b6d] transition-all duration-300 ease-in-out flex gap-2 h-[48px] lg:h-[58px] items-center justify-center rounded-[50px] w-[197px] cursor-pointer";
 
   return (
-    <button type="button" className={`${baseClasses} ${className ?? ""}`.trim()}>
+    <button
+      type="button"
+      className={`${baseClasses} ${className ?? ""}`.trim()}
+    >
       {icon ? (
         <div className="flex-none">
           <div>{icon}</div>
         </div>
       ) : null}
       <p
-        className="font-IRANYekanXVF font-semibold leading-[normal] not-italic relative shrink-0 text-[15.25px] text-center text-white"
+        className="font-IRANYekanXVF font-semibold leading-[normal] not-italic relative shrink-0  text-[12.75px] lg:text-[15.25px] text-center text-white"
         dir="auto"
       >
         {title}

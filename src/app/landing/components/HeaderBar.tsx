@@ -10,7 +10,7 @@ import { Button } from "@/components/Button";
 export default function HeaderBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const NAV_TARGETS: Record<string, string> = {
-    "معرفی": "intro-section",
+    معرفی: "intro-section",
     "تماس با ما": "contact-section",
     "سوالات متداول": "faq-section",
     "قوانین و مقررات": "rules-section",
@@ -28,9 +28,10 @@ export default function HeaderBar() {
 
   return (
     <header className="bg-[#fff2f2] w-full">
-      <div className="mx-auto flex w-full max-w-[1200px] flex-wrap items-center justify-between gap-4 px-4 py-5 sm:px-8 lg:flex-nowrap lg:px-24">
-        <div className="flex items-center gap-3 sm:gap-6">
-          <div className="h-12 w-12 overflow-hidden rounded-full bg-white/60 p-2 sm:h-[59px] sm:w-[59px] sm:rounded-none sm:bg-transparent sm:p-0">
+      <div className="mx-auto flex w-full max-w-[1200px] flex-wrap items-center justify-between gap-4 px-4 py-5
+       sm:px-4 lg:flex-nowrap lg:px-12">
+        <div className="lg:flex items-center gap-3 sm:gap-6 hidden">
+          <div className="h-12 w-12 overflow-hidden rounded-full bg-white/60 p-2 sm:h-[59px] sm:w-[59px] sm:rounded-none sm:bg-transparent sm:p-0 hidden lg:block">
             <img
               alt="Nestak"
               className="block size-full object-contain"
@@ -52,10 +53,33 @@ export default function HeaderBar() {
             </button>
           ))}
         </nav>
+        <button
+          type="button"
+          onClick={() => setMenuOpen(true)}
+          className="inline-flex size-11 items-center justify-center rounded-2xl  text-[#303030] lg:hidden cursor-pointer"
+          aria-label="باز کردن منو"
+          aria-expanded={menuOpen}
+        >
+          <span className="sr-only">باز کردن منو</span>
+          <div className="flex flex-col gap-1.5">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.17391 17.4737C3.52558 17.4737 3 18.0392 3 18.7368C3 19.4345 3.52558 20 4.17391 20H12C12.6483 20 13.1739 19.4345 13.1739 18.7368C13.1739 18.0392 12.6483 17.4737 12 17.4737H4.17391ZM4.17391 10.7368C3.52558 10.7368 3 11.3024 3 12C3 12.6976 3.52558 13.2632 4.17391 13.2632H19.8261C20.4744 13.2632 21 12.6976 21 12C21 11.3024 20.4744 10.7368 19.8261 10.7368H4.17391ZM12 4C11.3517 4 10.8261 4.56554 10.8261 5.26316C10.8261 5.96078 11.3517 6.52632 12 6.52632H19.8261C20.4744 6.52632 21 5.96078 21 5.26316C21 4.56554 20.4744 4 19.8261 4H12Z"
+                fill="#5D5D5D"
+              />
+            </svg>
+          </div>
+        </button>
 
-        <div className="flex flex-1 items-center gap-3 justify-between sm:justify-end lg:flex-none">
+        <div className="items-center gap-3 justify-between sm:justify-end lg:flex-none">
           <Button
-            className="h-12 w-full max-w-[240px] text-[14px] sm:h-[58px] sm:max-w-none sm:w-[197px]"
+            className="h-12 w-[161px]! max-w-[240px] text-[14px] lg:h-[58px lg:w-[197px]!"
             title=" نصب اپلیکیشن"
             icon={
               <svg
@@ -72,21 +96,6 @@ export default function HeaderBar() {
               </svg>
             }
           />
-
-          <button
-            type="button"
-            onClick={() => setMenuOpen(true)}
-            className="inline-flex size-11 items-center justify-center rounded-2xl border border-[#f42326] bg-white text-[#303030] shadow-sm lg:hidden"
-            aria-label="باز کردن منو"
-            aria-expanded={menuOpen}
-          >
-            <span className="sr-only">باز کردن منو</span>
-            <div className="flex flex-col gap-1.5">
-              <span className="block h-0.5 w-5 rounded-full bg-[#303030]" />
-              <span className="block h-0.5 w-5 rounded-full bg-[#303030]" />
-              <span className="block h-0.5 w-4 rounded-full bg-[#303030] self-end" />
-            </div>
-          </button>
         </div>
       </div>
       {menuOpen ? (

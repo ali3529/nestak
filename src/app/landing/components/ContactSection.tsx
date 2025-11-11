@@ -32,55 +32,55 @@ export default function ContactSection({ email, phone, address }: ContactSection
             </p>
 
             <div className="flex flex-col items-end gap-6 text-[#303030] text-[14px]">
-              <div className="flex items-center gap-3">
-                <p className="font-IRANYekanXVF font-medium">
-                  {email || defaultEmail}
-                </p>
+              <div className="flex flex-row-reverse items-center gap-3">
                 <img
                   src="/Icons/solid/mail.svg"
                   alt="ایمیل"
                   className="size-6"
                 />
+                <p className="font-IRANYekanXVF font-medium" dir="ltr">
+                  {email || defaultEmail}
+                </p>
               </div>
 
-              <div className="flex items-center gap-3">
-                <p className="font-IRANYekanXVF font-medium">
-                  {phone || defaultPhone}
-                </p>
+              <div className="flex flex-row-reverse items-center gap-3">
                 <img
                   src="/Icons/solid/call.svg"
                   alt="تلفن"
                   className="size-6"
                 />
+                <p className="font-IRANYekanXVF font-medium" dir="ltr">
+                  {phone || defaultPhone}
+                </p>
               </div>
 
-              <div className="flex items-center gap-3">
-                <p className="font-IRANYekanXVF font-medium">
-                  {address || defaultAddress}
-                </p>
+              <div className="flex flex-row-reverse items-center gap-3">
                 <img
                   src="/Icons/solid/location.svg"
                   alt="آدرس"
                   className="size-6"
                 />
+                <p className="font-IRANYekanXVF font-medium text-right">
+                  {address || defaultAddress}
+                </p>
               </div>
 
-              <div className="flex items-start gap-3">
-                <div className="flex flex-col items-end gap-1">
-                  <p className="font-IRANYekanXVF font-medium">
-                    شنبه - چهارشنبه:
-                  </p>
-                  <div className="flex items-center gap-1 font-IRANYekanXVF font-medium">
-                    <span>۰۸:۰۰</span>
-                    <span>الی</span>
-                    <span>۲۰:۰۰</span>
-                  </div>
-                </div>
+              <div className="flex flex-row-reverse items-start gap-3">
                 <img
                   src="/Icons/solid/clock-circle.svg"
                   alt="ساعت کاری"
                   className="size-6"
                 />
+                <div className="flex flex-col items-end gap-1">
+                  <p className="font-IRANYekanXVF font-medium">
+                    شنبه - چهارشنبه:
+                  </p>
+                  <div className="flex flex-row-reverse items-center gap-1 font-IRANYekanXVF font-medium">
+                    <span>۲۰:۰۰</span>
+                    <span>الی</span>
+                    <span>۰۸:۰۰</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
