@@ -1,8 +1,15 @@
-"use client";
-
 import BackgroundArt from "./BackgroundArt";
 
-export default function Hero() {
+interface HeroProps {
+  title?: string;
+  subtitle?: string;
+}
+
+export default function Hero({ title, subtitle }: HeroProps) {
+  const defaultTitle = "نستک، همراه وفادار صاحبان حیوانات خانگی";
+  const defaultSubtitle =
+    "نستک تجربه‌ای کامل برای صاحبان حیوانات خانگی فراهم کرده؛ یادآوری کارهای روزانه، گفت‌وگوی آنلاین با دامپزشک‌ها، واگذاری یا سرپرستی پت، خرید از پت‌شاپ و مطالعه مقالات آموزشی همین حالا ثبت‌نام کن و ۳۰ روز استفاده رایگان رو تجربه کن!";
+
   return (
     <section className="relative overflow-hidden bg-[#fff2f2]">
       <div className="mx-auto flex w-full max-w-[900px] flex-col items-center px-4 pt-12 pb-40 text-center sm:px-8 lg:px-0">
@@ -11,17 +18,13 @@ export default function Hero() {
             className="font-IRANYekanXVF font-bold text-[#303030] text-[20px] leading-[34px] sm:text-[23px] lg:text-[28px]"
             dir="auto"
           >
-            <span className="text-[#f42326] font-IRANYekanXVF">نستک</span>، همراه
-            وفادار صاحبان حیوانات خانگی
+            {title || defaultTitle}
           </p>
           <p
             className="font-IRANYekanXVF font-normal text-[#919191] text-[14px] leading-[30px] max-w-[640px]"
             dir="auto"
           >
-            نستک تجربه‌ای کامل برای صاحبان حیوانات خانگی فراهم کرده؛ یادآوری کارهای
-            روزانه، گفت‌وگوی آنلاین با دامپزشک‌ها، واگذاری یا سرپرستی پت، خرید از
-            پت‌شاپ و مطالعه مقالات آموزشی همین حالا ثبت‌نام کن و ۳۰ روز استفاده
-            رایگان رو تجربه کن!
+            {subtitle || defaultSubtitle}
           </p>
         </div>
         <div className="mt-8 flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-center sm:gap-4">

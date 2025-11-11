@@ -34,7 +34,7 @@ export default function HeaderBar() {
             <img
               alt="Nestak"
               className="block size-full object-contain"
-              src={"/icons/Colors/Nestap-Logo-Icon.svg"}
+              src="/Icons/Colors/Nestap-Logo-Icon.svg"
             />
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function HeaderBar() {
               ×
             </button>
             <img
-              src="/icons/Colors/Nestap-Logo-Icon.svg"
+              src="/Icons/Colors/Nestap-Logo-Icon.svg"
               alt="Nestak"
               className="h-16 w-16 object-contain"
             />
