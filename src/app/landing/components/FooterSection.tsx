@@ -102,7 +102,7 @@ export default function FooterSection({ email, phone, address }: FooterSectionPr
           </div>
 
           {/* Quick Access Menu (left on desktop, last on mobile) */}
-          <div className="flex flex-col gap-5 lg:gap-8  items-end lg:max-w-[234px]">
+          <div className="flex flex-col gap-5 lg:gap-8 justify-between  items-end lg:max-w-[234px]">
             <p
               className="font-IRANYekanXVF font-semibold leading-normal text-[#f42326] text-[15.25px] text-right w-full whitespace-pre-wrap"
               dir="auto"
@@ -114,9 +114,7 @@ export default function FooterSection({ email, phone, address }: FooterSectionPr
                 (t) => (
                   <p
                     key={t}
-                    className={`font-IRANYekanXVF font-medium leading-normal text-[#5d5d5d] text-[14px] text-right ${
-                      t == "سوالات متداول" ? "text-[#f42326]" : "text-[#5d5d5d]"
-                    }`}
+                    className={`font-IRANYekanXVF font-medium leading-normal text-[#5d5d5d] text-[14px] text-right `}
                     dir="auto"
                   >
                     {t}

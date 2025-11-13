@@ -28,8 +28,10 @@ export default function HeaderBar() {
 
   return (
     <header className="bg-[#fff2f2] w-full">
-      <div className="mx-auto flex w-full max-w-[1200px] flex-wrap items-center justify-between gap-4 px-4 py-5
-       sm:px-4 lg:flex-nowrap lg:px-12">
+      <div
+        className="mx-auto flex w-full max-w-[1200px] flex-wrap items-center justify-between gap-4 px-4 py-5
+       sm:px-4 lg:flex-nowrap lg:px-12"
+      >
         <div className="lg:flex items-center gap-3 sm:gap-6 hidden">
           <div className="h-12 w-12 overflow-hidden rounded-full bg-white/60 p-2 sm:h-[59px] sm:w-[59px] sm:rounded-none sm:bg-transparent sm:p-0 hidden lg:block">
             <img
@@ -101,19 +103,22 @@ export default function HeaderBar() {
       {menuOpen ? (
         <div className="fixed inset-0 z-50 bg-white px-6 py-8 sm:px-10">
           <div className="flex items-center justify-between">
-            <button
-              type="button"
-              onClick={() => setMenuOpen(false)}
-              className="text-3xl font-light text-[#b0b0b0]"
-              aria-label="بستن منو"
-            >
-              ×
-            </button>
+            <div></div>
+
             <img
               src="/Icons/Colors/Nestap-Logo-Icon.svg"
               alt="Nestak"
               className="h-16 w-16 object-contain"
             />
+
+            <button
+              type="button"
+              onClick={() => setMenuOpen(false)}
+              className="text-3xl font-light text-[#b0b0b0] cursor-pointer"
+              aria-label="بستن منو"
+            >
+              ×
+            </button>
           </div>
           <div className="mt-16 flex flex-col items-center gap-10 text-[#5d5d5d]">
             {HEADER_ITEMS.map((item) => (
