@@ -39,7 +39,7 @@ export default function Hero({ title, subtitle }: HeroProps) {
       <div className="mx-auto flex w-full  lg:max-w-[900px] flex-col items-center px-11 pt-8 pb-32 text-center sm:pt-12 sm:pb-40 lg:px-0">
         <div className="flex w-full flex-col items-center gap-4 sm:gap-6">
           <h1
-            className="font-IRANYekanXVF font-bold text-[#303030] text-[17.5px] lg:leading-[38px]  lg:text-[30px] lg:leading-[48px]"
+            className="font-IRANYekanXVF font-bold px-4 lg:px-0 text-[#303030] text-[17.5px] lg:leading-[38px]  lg:text-[30px] lg:leading-[48px]"
             dir="auto"
           >
             {renderTitle(title || defaultTitle)}
