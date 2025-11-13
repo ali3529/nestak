@@ -39,7 +39,7 @@ export default function WhyChoose({ title, subtitle, features }: WhyChooseProps)
     : WHY_CHOOSE_ITEMS;
   return (
     <section className="bg-[#f4f5f7] w-full">
-      <div className="mx-auto flex w-full  flex-col items-center px-4 pb-16 pt-24 text-center sm:px-8 lg:px-40">
+      <div className="mx-auto flex w-full  flex-col items-center px-4 pb-16 pt-16 lg:pt-24 text-center sm:px-8 lg:px-40">
         <div className="flex w-full max-w-[640px] sm:max-w-full!  flex-col items-start gap-3">
           <p className="font-IRANYekanXVF text-[15.25px] md:text-[20px] font-bold text-[#303030] sm:text-[22px]" dir="auto">
             {renderTitle(title || defaultTitle)}
@@ -71,7 +71,7 @@ export default function WhyChoose({ title, subtitle, features }: WhyChooseProps)
                   {item.title}
                 </p>
                 <p
-                  className="font-IRANYekanXVF  text-[11.25px] lg:text-[14px] font-medium leading-[18px] lg:leading-[28px] text-[#919191]"
+                  className="font-IRANYekanXVF  text-[11.25px] lg:text-[14px] font-[400] leading-[18px] lg:leading-[28px] text-[#919191]"
                   dir="auto"
                 >
                   {item.desc}

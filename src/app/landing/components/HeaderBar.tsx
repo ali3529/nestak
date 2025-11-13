@@ -25,7 +25,13 @@ export default function HeaderBar() {
       setMenuOpen(false);
     }
   };
-
+ const handleNavigateStatic = (targetId: string) => {
+   if (!targetId) return;
+   const el = document.getElementById(targetId);
+   if (el) {
+     el.scrollIntoView({ behavior: "smooth", block: "center" });
+   }
+ };
   return (
     <header className="bg-[#fff2f2] w-full">
       <div
@@ -81,6 +87,7 @@ export default function HeaderBar() {
 
         <div className="items-center gap-3 justify-between sm:justify-end lg:flex-none">
           <Button
+            onClick={() => handleNavigateStatic("download-section")}
             className="h-12 w-[161px]! max-w-[240px] text-[14px] lg:h-[58px lg:w-[197px]!"
             title=" نصب اپلیکیشن"
             icon={

@@ -5,9 +5,16 @@ interface ButtonProps {
   icon?: React.ReactNode;
   endIcon?: React.ReactNode;
   className?: string;
+  onClick?:()=> void;
 }
 
-export const Button: FC<ButtonProps> = ({ title, icon, endIcon, className }) => {
+export const Button: FC<ButtonProps> = ({
+  title,
+  icon,
+  endIcon,
+  className,
+  onClick,
+}) => {
   const baseClasses =
     "bg-[#f42326] hover:bg-[#ff6b6d] transition-all duration-300 ease-in-out flex gap-2 h-[48px] lg:h-[58px] items-center justify-center rounded-[50px] w-[197px] cursor-pointer";
 
@@ -15,6 +22,7 @@ export const Button: FC<ButtonProps> = ({ title, icon, endIcon, className }) => 
     <button
       type="button"
       className={`${baseClasses} ${className ?? ""}`.trim()}
+      onClick={onClick && onClick}
     >
       {icon ? (
         <div className="flex-none">

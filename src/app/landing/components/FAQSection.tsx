@@ -60,7 +60,7 @@ export default function FAQSection({ faqList }: FAQSectionProps) {
   return (
     <div className="relative w-full px-4 py-8 md:px-8 lg:px-[155px] lg:py-7 overflow-hidden">
       <p
-        className="font-IRANYekanXVF font-semibold leading-normal not-italic text-white-700 text-lg md:text-[20.5px] text-center mb-8 lg:mb-[85px]"
+        className="font-IRANYekanXVF font-semibold leading-normal not-italic text-white-700 text-lg md:text-[20.5px] text-center mb-8 lg:mb-[56px]"
         dir="auto"
       >
         سوالات متداول

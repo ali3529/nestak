@@ -22,12 +22,12 @@ export default function ContactSection({ email, phone, address }: ContactSection
             <h2 className="font-IRANYekanXVF font-semibold text-[20.5px] text-[#303030] mb-5 text-right">
               ارتباط با ما
             </h2>
-            <p className="font-IRANYekanXVF text-[14px] leading-7 text-[#919191] text-right mb-2">
+            <p className="font-IRANYekanXVF text-[11.25px] lg:text-[14px] leading-5 lg:leading-6   text-[#919191] text-right ">
               نظراتتان برای ما ارزشمند است و دوست داریم تجربه شما از حیوانات
               خانگی‌تان را بشنویم. تیم ما آماده است که به سوالات، مشکلات و
               درخواست‌های شما پاسخ دهد.
             </p>
-            <p className="font-IRANYekanXVF text-[14px] leading-7 text-[#919191] text-right mb-8">
+            <p className="font-IRANYekanXVF text-[11.25px] lg:text-[14px] leading-5 lg:leading-6 text-[#919191] text-right mb-8">
               راه‌های ارتباطی مختلفی را در اختیار شما قرار داده‌ایم تا راحت‌تر
               با ما در تماس باشید.
             </p>
@@ -71,9 +71,9 @@ export default function ContactSection({ email, phone, address }: ContactSection
                     شنبه - چهارشنبه:
                   </p>
                   <div className="flex items-center gap-1 font-IRANYekanXVF font-medium">
-                    <span>۲۰:۰۰</span>
-                    <span>الی</span>
                     <span>۰۸:۰۰</span>
+                    <span>الی</span>
+                    <span>۲۰:۰۰</span>
                   </div>
                 </div>
               </div>

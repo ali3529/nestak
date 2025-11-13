@@ -26,12 +26,14 @@ export default async function Landing() {
           subtitle={landingData?.featureSubTitle}
           features={landingData?.feature}
         />
-        <AppDownload
-          bazzar={landingData?.bazzar}
-          sibapp={landingData?.sibapp}
-          googlePlay={landingData?.googlePlay}
-          directApkLink={landingData?.directApkLink}
-        />
+        <div id="download-section">
+          <AppDownload
+            bazzar={landingData?.bazzar}
+            sibapp={landingData?.sibapp}
+            googlePlay={landingData?.googlePlay}
+            directApkLink={landingData?.directApkLink}
+          />
+        </div>
         <div id="contact-section">
           <ContactSection
             email={landingData?.email}

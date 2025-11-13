@@ -19,7 +19,7 @@ export default function RulesStrip({ content, enamadLink }: RulesStripProps) {
     <section className="relative w-full px-4 py-8 md:px-8 lg:px-[155px] lg:py-16">
       <div className="mx-auto max-w-[1440px]">
         {/* Main content area */}
-        <div className="flex flex-row-reverse lg:flex-row-reverse gap-6 lg:gap-10 items-start relative">
+        <div className="flex flex-col-reverse lg:flex-row-reverse gap-6 lg:gap-10 items-end lg:items-start relative">
           {/* E-namad Badge */}
           {enamadLink ? (
             <a
@@ -37,7 +37,8 @@ export default function RulesStrip({ content, enamadLink }: RulesStripProps) {
               </div>
             </a>
           ) : (
-            <div className="border border-gray-200 border-solid flex flex-col gap-2 h-28 items-center justify-center rounded-2xl w-[116px] shrink-0">
+            <div className="border border-gray-200 border-solid flex flex-col gap-2 h-28 items-center justify-center
+             rounded-2xl w-[116px] shrink-0">
               <div className="relative h-[69px] w-[89px]">
                 <img
                   alt="E-namad certification"
@@ -49,12 +50,12 @@ export default function RulesStrip({ content, enamadLink }: RulesStripProps) {
           )}
           {/* Content */}
           <div className="flex-1 flex flex-col gap-4">
-            <h2 className="font-IRANYekanXVF font-semibold leading-normal text-white-700 text-[20.5px] text-right">
+            <h2 className="font-IRANYekanXVF font-semibold leading-6 lg:leading-[26px] text-white-700 text-[12.75px] lg:text-[20.5px] text-right">
               قوانین و مقررات
             </h2>
 
             <p
-              className={`font-IRANYekanXVF font-normal leading-[1.7] text-white-500 text-[14px] text-right whitespace-pre-wrap ${
+              className={`font-IRANYekanXVF font-normal  leading-6 lg:leading-[26px] text-white-500 text-[12.75px] lg:text-[14px] text-right whitespace-pre-wrap ${
                 isExpanded ? "" : "line-clamp-2 lg:line-clamp-3"
               }`}
             >
@@ -64,7 +65,7 @@ export default function RulesStrip({ content, enamadLink }: RulesStripProps) {
             {/* Toggle Button */}
             <button
               onClick={() => setIsExpanded(!isExpanded)}
-              className="flex flex-row-reverse items-center justify-end  self-start hover:opacity-80 transition-opacity"
+              className="flex flex-row-reverse items-center justify-end  self-start hover:opacity-80 transition-opacity cursor-pointer"
             >
               <svg
                 width="20"
@@ -72,7 +73,7 @@ export default function RulesStrip({ content, enamadLink }: RulesStripProps) {
                 viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                className={`${isExpanded?"rotate-90":""}`}
+                className={`${isExpanded ? "rotate-90" : ""}`}
               >
                 <path
                   d="M12.155 13.776C12.3707 14.0456 12.3269 14.4393 12.0574 14.6549C11.7878 14.8706 11.3941 14.8268 11.1785 14.5573L7.84513 10.3906C7.66253 10.1623 7.66252 9.83761 7.84513 9.60935L11.1785 5.44269C11.3941 5.17315 11.7878 5.1294 12.0574 5.34503C12.3269 5.56066 12.3707 5.9544 12.155 6.22394L9.1342 9.99998L12.155 13.776Z"

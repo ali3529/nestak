@@ -72,25 +72,27 @@ export default function AppDownload({
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex w-full items-center justify-start gap-4 rounded-[50px] border border-white bg-white px-6 py-2 lg:py-3 text-right hover:border
-                 hover:border-[#F44336]  transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#f42326]"
+                className="group inline-flex w-[225px] mx-auto lg:w-full items-center justify-start gap-4 rounded-[50px] border border-white
+                 bg-white px-6 py-2 lg:py-3 text-right hover:border
+                 hover:border-[#F44336]  transition-all duration-300 focus-visible:outline focus-visible:outline-2 
+                 focus-visible:outline-offset-2 focus-visible:outline-[#f42326]"
               >
-                <div className="flex size-[50px] items-center justify-center rounded-[26px]  transition-colors duration-300 ">
+                <div className="flex size-[28px] lg:size-[28px] items-center justify-center rounded-[26px]  transition-colors duration-300 ">
                   <img
                     src={item.icon}
                     alt={item.title}
-                    className="h-6 w-6 object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>   
                 <div className="flex flex-col items-start gap-1">
                   <p
                     className="font-IRANYekanXVF text-[12.5px] font-medium text-[#919191]"
-                    dir="auto"
+                    dir="auto" 
                   >
                     {item.subtitle}
                   </p>
                   <p
-                    className="font-IRANYekanXVF text-[14.5px] font-semibold text-[#303030]"
+                    className="font-IRANYekanXVF text-[14px] font-semibold text-[#303030] "
                     dir="auto"
                   >
                     {item.title}
