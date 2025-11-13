@@ -20,3 +20,42 @@ export async function fetchLandingData(): Promise<LandingData | null> {
     return null;
   }
 }
+
+export interface ContactFormData {
+  name: string;
+  email: string; // Empty string to match API structure
+  phone: string;
+  message: string;
+}
+
+export async function submitContactForm(
+  data: ContactFormData
+): Promise<{ success: boolean; message?: string }> {
+  try {
+    const response = await fetch(API_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      return {
+        success: false,
+        message: "خطا در ارسال پیام. لطفاً دوباره تلاش کنید.",
+      };
+    }
+
+    return {
+      success: true,
+      message: "پیام شما با موفقیت ارسال شد.",
+    };
+  } catch (error) {
+    console.error("Error submitting contact form:", error);
+    return {
+      success: false,
+      message: "خطا در ارسال پیام. لطفاً دوباره تلاش کنید.",
+    };
+  }
+}

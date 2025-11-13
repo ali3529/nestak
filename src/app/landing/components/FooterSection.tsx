@@ -1,12 +1,16 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
-
 interface FooterSectionProps {
   email?: string;
   phone?: string;
   address?: string;
 }
 
-export default function FooterSection({ email, phone, address }: FooterSectionProps) {
+export default function FooterSection({
+  email,
+  phone,
+  address,
+}: FooterSectionProps) {
   const imgMail = "/Icons/solid/mail.svg";
   const imgCall = "/Icons/solid/call.svg";
   const imgLocation = "/Icons/solid/location.svg";
@@ -18,6 +22,19 @@ export default function FooterSection({ email, phone, address }: FooterSectionPr
   const defaultPhone = "011 2645 33 17 - 0912 649 12 18";
   const defaultAddress = "تهران، خ انقلاب، کوچه بنفشه، پلاک18";
 
+  const items = [
+    { title: "معرفی", link: "intro-section" },
+    { title: "تماس با ما", link: "contact-section" },
+    { title: "سوالات متداول", link: "faq-section" },
+    { title: "قوانین و مقررات", link: "rules-section" },
+  ];
+  const handleNavigate = (targetId: string) => {
+    if (!targetId) return;
+    const el = document.getElementById(targetId);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
   return (
     <footer
       dir="ltr"
@@ -90,10 +107,10 @@ export default function FooterSection({ email, phone, address }: FooterSectionPr
                   >
                     شنبه - چهارشنبه:
                   </p>
-                  <div className="flex font-IRANYekanXVF font-medium gap-1 items-center leading-normal text-right">
-                    <p dir="auto">20:00</p>
+                  <div className="flex font-IRANYekanXVF !font-medium gap-1 items-center leading-normal text-right">
+                    <p dir="auto">۲۰:۰۰</p>
                     <p dir="auto">الی</p>
-                    <p dir="auto">08:00</p>
+                    <p dir="auto">۰۸:۰۰</p>
                   </div>
                 </div>
                 <img alt="Clock" className="shrink-0 size-6" src={imgClock} />
@@ -102,7 +119,7 @@ export default function FooterSection({ email, phone, address }: FooterSectionPr
           </div>
 
           {/* Quick Access Menu (left on desktop, last on mobile) */}
-          <div className="flex flex-col gap-5 lg:gap-8  items-end lg:max-w-[234px]">
+          <div className="flex flex-col gap-5 lg:gap-8 justify-between  items-end lg:max-w-[234px]">
             <p
               className="font-IRANYekanXVF font-semibold leading-normal text-[#f42326] text-[15.25px] text-right w-full whitespace-pre-wrap"
               dir="auto"
@@ -110,19 +127,16 @@ export default function FooterSection({ email, phone, address }: FooterSectionPr
               دسترسی سریع
             </p>
             <div className="flex flex-col gap-4 lg:gap-6 items-end w-full">
-              {["معرفی", "تماس با ما", "سوالات متداول", "قوانین و مقررات"].map(
-                (t) => (
-                  <p
-                    key={t}
-                    className={`font-IRANYekanXVF font-medium leading-normal text-[#5d5d5d] text-[14px] text-right ${
-                      t == "سوالات متداول" ? "text-[#f42326]" : "text-[#5d5d5d]"
-                    }`}
-                    dir="auto"
-                  >
-                    {t}
-                  </p>
-                )
-              )}
+              {items.map((t) => (
+                <p
+                  onClick={() => handleNavigate(t?.link)}
+                  key={t?.title}
+                  className={`font-IRANYekanXVF hover:text-[#F42326] transition-all font-medium leading-normal text-[#5d5d5d] text-[14px] text-right cursor-pointer`}
+                  dir="auto"
+                >
+                  {t?.title}
+                </p>
+              ))}
             </div>
           </div>
         </div>
@@ -137,9 +151,11 @@ export default function FooterSection({ email, phone, address }: FooterSectionPr
               dir="auto"
             >
               <span>طراحی و توسعه: </span>
-              <span className="font-IRANYekanXVF font-semibold text-[#f42326]">
-                فـنـورا
-              </span>
+              <a href="https://fanora.ir/" target="_blank">
+                <span className="font-IRANYekanXVF font-semibold text-[#f42326]">
+                  فـنـورا
+                </span>
+              </a>
             </p>
           </div>
           <div className="flex gap-1 items-center justify-end order-2">
@@ -148,9 +164,11 @@ export default function FooterSection({ email, phone, address }: FooterSectionPr
               dir="auto"
             >
               <span>تمامی حقوق متعلق به </span>
-              <span className="font-IRANYekanXVF font-bold text-[#f42326]">
-                نستک
-              </span>
+              <a href="#">
+                <span className="font-IRANYekanXVF font-bold text-[#f42326]">
+                  نستک
+                </span>
+              </a>
               <span> می‌باشد.</span>
             </p>
             <img
@@ -164,4 +182,3 @@ export default function FooterSection({ email, phone, address }: FooterSectionPr
     </footer>
   );
 }
-
