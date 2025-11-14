@@ -10,8 +10,6 @@ interface WhyChooseProps {
 }
 
 export default function WhyChoose({ title, subtitle, features }: WhyChooseProps) {
-  const defaultTitle = "چرا نستک رو انتخاب کنم؟";
-  const defaultSubtitle = "با یادآورهای دقیق، ارتباط سریع با دامپزشک‌ها و امکانات متنوع خرید و سرپرستی، دیگه هیچ دغدغه‌ای برای مراقبت از پتت نداری.";
 
   const imageBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || "https://serv.nestak.ir/uploads/";
 
@@ -42,10 +40,10 @@ export default function WhyChoose({ title, subtitle, features }: WhyChooseProps)
       <div className="mx-auto flex w-full  flex-col items-center px-4 pb-16 pt-16 lg:pt-24 text-center sm:px-8 lg:px-40">
         <div className="flex w-full max-w-[640px] sm:max-w-full!  flex-col items-start gap-3">
           <p className="font-IRANYekanXVF text-[15.25px] md:text-[20px] font-bold text-[#303030] sm:text-[22px]" dir="auto">
-            {renderTitle(title || defaultTitle)}
+            {renderTitle(title || "")}
           </p>
           <p className="font-IRANYekanXVF text-[11.25px] md:text-[14px] font-normal text-right md:leading-[30px] text-[#919191]" dir="auto">
-            {subtitle || defaultSubtitle}
+            {subtitle || ""}
           </p>
         </div>
 

@@ -13,7 +13,7 @@ export default function RulesStrip({ content, enamadLink }: RulesStripProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const defaultText = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشت.";
-  const fullText = content || defaultText;
+  const fullText = content || "";
 
   return (
     <section className="relative w-full px-4 py-8 md:px-8 lg:px-[155px] lg:py-16">

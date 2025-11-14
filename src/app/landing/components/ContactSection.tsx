@@ -13,9 +13,6 @@ interface ContactSectionProps {
 }
 
 export default function ContactSection({ email, phone, address }: ContactSectionProps) {
-  const defaultEmail = "nestak.info@gmail.com";
-  const defaultPhone = "۱۸ ۱۲ ۶۴۹ ۰۹۱۲ - ۱۷ ۳۳ ۲۶۴۵ ۰۱۱";
-  const defaultAddress = "تهران، خ انقلاب، کوچه بهشتی، پلاک۱۸";
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null);

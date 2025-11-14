@@ -18,9 +18,6 @@ export default function FooterSection({
   const imgLogo = "/Icons/Colors/Nestap-Logo-Icon.svg";
   const imgCopyright = "/Icons/solid/Copyright.svg";
 
-  const defaultEmail = "nestak.info@gmail.com";
-  const defaultPhone = "011 2645 33 17 - 0912 649 12 18";
-  const defaultAddress = "تهران، خ انقلاب، کوچه بنفشه، پلاک18";
 
   const items = [
     { title: "معرفی", link: "intro-section" },
@@ -73,7 +70,7 @@ export default function FooterSection({
                   className="font-IRANYekanXVF font-medium leading-normal text-right"
                   dir="auto"
                 >
-                  {email || defaultEmail}
+                  {email }
                 </p>
                 <img alt="Email" className="shrink-0 size-6" src={imgMail} />
               </div>
@@ -82,7 +79,7 @@ export default function FooterSection({
                   className="font-IRANYekanXVF font-medium leading-normal text-right"
                   dir="auto"
                 >
-                  {phone || defaultPhone}
+                  {phone }
                 </p>
                 <img alt="Phone" className="shrink-0 size-6" src={imgCall} />
               </div>
@@ -91,7 +88,7 @@ export default function FooterSection({
                   className="font-IRANYekanXVF font-medium leading-normal text-right"
                   dir="auto"
                 >
-                  {address || defaultAddress}
+                  {address }
                 </p>
                 <img
                   alt="Location"

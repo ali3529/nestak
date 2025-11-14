@@ -23,31 +23,13 @@ export default function FAQSection({ faqList }: FAQSectionProps) {
       }))
     : [];
 
-  // Default fallback data
-  const defaultRightItems: FaqItem[] = [
-    { id: "r-0", title: "۱. اپلیکیشن چه امکاناتی دارد؟" },
-    {
-      id: "r-1",
-      title: "3. آیا می‌توانم یادآورهای مخصوص برای حیوان خانگی‌ام تنظیم کنم؟",
-      details:
-        "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.",
-    },
-    { id: "r-2", title: "5. آیا می‌توانم از طریق اپلیکیشن خرید کنم؟" },
-    { id: "r-3", title: "7. اپلیکیشن چه امکاناتی دارد؟" },
-  ];
-
-  const defaultLeftItems: FaqItem[] = Array.from({ length: 4 }).map((_, i) => ({
-    id: `l-${i}`,
-    title: `سوال متداول ${i + 1}`,
-    details:
-      "لورم ایپسوم متن ساختگی برای پاسخ نمونه. این متن جهت پر کردن فضا استفاده می‌شود.",
-  }));
+  
 
   // Split FAQ items into two columns
   const allItems =
     apiItems.length > 0
       ? apiItems
-      : [...defaultRightItems, ...defaultLeftItems];
+      : []
   const midPoint = Math.ceil(allItems.length / 2);
   const rightItems = allItems.slice(0, midPoint);
   const leftItems = allItems.slice(midPoint);

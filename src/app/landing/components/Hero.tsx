@@ -8,9 +8,6 @@ interface HeroProps {
 }
 
 export default function Hero({ title, subtitle }: HeroProps) {
-  const defaultTitle = "نستک، همراه وفادار صاحبان حیوانات خانگی";
-  const defaultSubtitle =
-    "نستک تجربه‌ای کامل برای صاحبان حیوانات خانگی فراهم کرده؛ یادآوری کارهای روزانه، گفت‌وگوی آنلاین با دامپزشک‌ها، واگذاری یا سرپرستی پت، خرید از پت‌شاپ و مطالعه مقالات آموزشی همین حالا ثبت‌نام کن و ۳۰ روز استفاده رایگان رو تجربه کن!";
 
   // Function to highlight "نستک" in red
   const renderTitle = (text: string) => {
@@ -42,13 +39,13 @@ export default function Hero({ title, subtitle }: HeroProps) {
             className="font-IRANYekanXVF font-bold px-4 lg:px-0 text-[#303030] text-[17.5px] lg:leading-[38px]  lg:text-[30px] lg:leading-[48px]"
             dir="auto"
           >
-            {renderTitle(title || defaultTitle)}
+            {renderTitle(title ||"")}
           </h1>
           <p
             className="font-IRANYekanXVF font-normal text-[#919191] leading-5 text-[11.25px]  lg:text-[14px] lg:leading-[30px] pb-10 lg:pb-5"
             dir="auto"
           >
-            {subtitle || defaultSubtitle}
+            {subtitle || ""}
           </p>
         </div>
         <div className="mt-6 flex w-full flex-row items-stretch gap-3 sm:mt-8 sm:flex-row sm:items-center sm:justify-center sm:gap-4 lg:pb-16">
