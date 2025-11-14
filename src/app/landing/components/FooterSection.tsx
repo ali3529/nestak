@@ -119,7 +119,7 @@ export default function FooterSection({
           </div>
 
           {/* Quick Access Menu (left on desktop, last on mobile) */}
-          <div className="flex flex-col gap-5 lg:gap-8 justify-between  items-end lg:max-w-[234px]">
+          <div className="flex flex-col gap-5 lg:gap-8 justify-start  items-end lg:max-w-[234px]">
             <p
               className="font-IRANYekanXVF font-semibold leading-normal text-[#f42326] text-[15.25px] text-right w-full whitespace-pre-wrap"
               dir="auto"

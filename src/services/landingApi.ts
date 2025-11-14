@@ -5,7 +5,7 @@ const API_URL = "https://serv.nestak.ir/api/v1/landing";
 export async function fetchLandingData(): Promise<LandingData | null> {
   try {
     const response = await fetch(API_URL, {
-      next: { revalidate: 3600 }, // Cache for 1 hour
+      next: { revalidate: 0 }, // Cache Disable
     });
 
     if (!response.ok) {

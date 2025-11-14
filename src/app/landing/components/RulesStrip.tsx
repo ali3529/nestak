@@ -19,7 +19,7 @@ export default function RulesStrip({ content, enamadLink }: RulesStripProps) {
     <section className="relative w-full px-4 py-8 md:px-8 lg:px-[155px] lg:py-16">
       <div className="mx-auto max-w-[1440px]">
         {/* Main content area */}
-        <div className="flex flex-col-reverse lg:flex-row-reverse gap-6 lg:gap-10 items-end lg:items-start relative">
+        <div className="flex flex-col-reverse lg:flex-row-reverse gap-6 lg:gap-10 items-center lg:items-start relative">
           {/* E-namad Badge */}
           {enamadLink ? (
             <a

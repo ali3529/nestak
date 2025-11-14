@@ -18,7 +18,7 @@ export default function AppDownload({
   // Build dynamic downloads array with API links
   const downloadLinks = [
     directApkLink && {
-      title: "لینک مستقیم اندروید",
+      title: "لینک مستقیم",
       subtitle: "دانلود از",
       icon: "/Icons/solid/download-black.svg",
       href: directApkLink,

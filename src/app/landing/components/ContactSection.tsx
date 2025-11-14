@@ -214,7 +214,7 @@ export default function ContactSection({ email, phone, address }: ContactSection
                 </div>
               )}
 
-              <div className="flex justify-start">
+              <div className="flex justify-center lg:justify-start">
                 <Button
                   type="submit"
                   title={isSubmitting ? "در حال ارسال..." : "ارسال پیام"}
